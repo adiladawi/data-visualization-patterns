@@ -1,26 +1,12 @@
-# Code
-Describe el código del patron y que tipo de patron que es.
-# Name 
-Especifica en nombre del patron 
-# Description 
+# <code> Pattenr Name
+## Description 
 Se da una descripcion del patron que se va definir 
-# Required Data 
-# Usage
-# Rationale
-# R Implementation 
-## Data Set
-## Dependencies 
-> Packages
 
-## Code Example 
+## Required Data 
 
-# Python Implementation
+## Usage
 
-## Data Set
-## Dependencies 
-> Modules
+## Rationale
 
-## Code Example
-# Software Metrics and Results
 # Related Patterns
 
