@@ -11,6 +11,7 @@ Se da una descripcion del patron que se va definir
 ## Data Set
 ## Dependencies 
 > Packages
+
 ## Code Example 
 
 # Python Implementation
@@ -18,6 +19,7 @@ Se da una descripcion del patron que se va definir
 ## Data Set
 ## Dependencies 
 > Modules
+
 ## Code Example
 # Software Metrics and Results
 # Related Patterns
