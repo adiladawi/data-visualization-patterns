@@ -1,4 +1,4 @@
-# <code> Pattenr Name
+# CODE: Pattern Name
 ## Description 
 Se da una descripcion del patron que se va definir 
 
