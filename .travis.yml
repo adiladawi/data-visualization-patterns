@@ -45,4 +45,3 @@ script:
   - git add . 
   - git commit -m "añadiendo Pnw"
   - git push origin master
-Status API Training Shop Blog About Pricing
