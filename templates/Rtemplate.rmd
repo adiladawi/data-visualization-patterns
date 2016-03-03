@@ -1,0 +1,19 @@
+
+# R Implementation Pattern
+
+implementacion del patron en R
+
+## Data Set
+Data Set Secifications 
+
+## Dependencies 
+
+list of packages that are required for implementation
+>Packages
+
+## Code example 
+```{r}
+options(width=40)
+1:100
+```
+
