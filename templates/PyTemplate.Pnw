@@ -1,0 +1,19 @@
+# Python Implementation Pattern
+
+implementacion del patron en Python
+
+## Data Set
+Data Set Secifications 
+
+## Dependencies 
+
+list of Modules that are required for implementation
+>Modules
+
+## Code example 
+
+<<fig = True, width = '12 cm', echo = False>>=
+from pylab import *
+plot(arange(10))
+show()
+@
