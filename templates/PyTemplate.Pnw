@@ -1,3 +1,4 @@
+Pweave -f pandoc PyTemplate.Pnw
 # Python Implementation Pattern
 
 implementacion del patron en Python
