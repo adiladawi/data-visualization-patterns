@@ -1,0 +1,80 @@
+# PYTHON IMPLEMENTATION
+
+## Data Set
+
+## Dependences
+* Matplotlib
+* Seaborn
+* Vispy
+* Pyqtgraph
+
+
+## Code Example
+
+### Matplotlib
+
+<<fig = True, width = '12 cm', echo = False>>=
+import numpy as np
+import matplotlib.pyplot as plt
+from datos import data
+d=data('mtcars')
+plt.scatter(d.wt,d.mpg,  c='blue')
+plt.title('Scatterplot by Milles per Gallon and  Car Weight', family='serif', size=16)
+plt.xlabel('Car Weight', family= 'serif')
+plt.ylabel('Miles per Gallon', family='serif')
+plt.show()
+@
+
+### Seaborn
+<<fig = True, width = '12 cm', echo = False>>=
+import numpy as np
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+from datos import data
+import seaborn as sns
+
+sns.set(style="whitegrid", color_codes=True)
+d=data('mtcars')
+sns.stripplot(x=d.wt, y=d.mpg, data=d);
+plt.title('Scatterplots by Milles per Gallon and  Car Weight', family='serif', size=16)
+plt.xlabel('Car Weight', family= 'serif')
+plt.ylabel('Miles per Gallon', family='serif')
+plt.show()
+@
+
+### Vispy
+
+<<fig = True, width = '12 cm', echo = False>>=
+import vispy.plot as vp
+import numpy as np
+from datos import data
+d=data('mtcars')
+fig = vp.Fig()
+fig[0, 0].plot(d.wt, symbol='o', width=0.0, marker_size=4.0, edge_color='b', edge_width=5.0)
+
+if __name__ == '__main__':
+    fig.app.run()
+@
+
+### Pyqtgraph
+
+<<fig = True, width = '12 cm', echo = False>>=
+import pyqtgraph as pg
+from pyqtgraph.Qt import QtCore, QtGui
+import numpy as np
+from datos import data
+
+d=data('mtcars')
+win = pg.GraphicsWindow()
+win.resize(800,500)
+win.setWindowTitle('pyqtgraph example: Scatterplot')
+plt= win.addPlot(title="Scatterplots by Milles per Gallon and  Car Weigh")
+plt.plot(d.wt,d.mpg, pen=None, symbol='o', symbolSize=5, symbolPen=(255,255,255,200), symbolBrush=(0,0,255,150))
+plt.setLabel('left', "Miles per Gallon", units='mpg')
+plt.setLabel('bottom', "Car Weight", units='lbs')
+
+if __name__ == '__main__':
+    import sys
+    if (sys.flags.interactive != 1) or not hasattr(QtCore, 'PYQT_VERSION'):
+        QtGui.QApplication.instance().exec_()
+@
