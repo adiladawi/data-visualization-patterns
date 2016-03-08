@@ -1,0 +1,31 @@
+---
+output: md_document
+---
+
+# R Implementation Pattern
+
+Simple Line Chart pattern is very easy to implement on R, insomuch as R have a package called graphics in which can to make simple line chart, package graphics is recomended but there are more packages that are not default on R that can be implemented to make Simple Line Chart Pattern. 
+
+Then it shows an example of R pattern implementation.
+
+## Data Set
+
+For this example it will be used Data Set called mtcars, this data set is the R default data set this data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models).
+
+```{r}
+head(mtcars)
+
+```
+
+## Dependencies 
+
+list of packages that are required for implementation
+>Packages
+
+## Code example 
+```{r}
+cars <- (mtcars$wt)
+plot(cars, type="o", col="blue")
+title(main="Cars", col.main="blue", font.main=4)
+```
+
