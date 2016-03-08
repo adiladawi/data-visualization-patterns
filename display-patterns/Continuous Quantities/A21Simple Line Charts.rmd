@@ -19,11 +19,33 @@ head(mtcars)
 
 ## Dependencies 
 Graphics - default package on R
-
+Ggplot2 
+Lattice
 ## Code example 
+
+### Code Example With Graphics
 ```{r}
 cars <- (mtcars$wt)
 plot(cars, type="o", col="blue")
 title(main="Cars", col.main="blue", font.main=4)
 ```
+### Code Example With Ggplot
+```{r}
+head(mtcars)
+library(ggplot2)
+ggplot(data=mtcars, aes(x=mtcars$wt, y=mtcars$mpg))+
+  geom_line()+
+  geom_point()
 
+```
+### Code Example With Graphics
+```{r}
+library(lattice)
+panel.spline <- function(x, y) {
+  panel.xyplot(x, y) 
+  panel.loess(x, y) 
+}
+attach(mtcars)
+xyplot(mpg~wt, scales=list(cex=2, col="red"),
+       panel=panel.spline)
+```
