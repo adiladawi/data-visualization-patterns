@@ -18,9 +18,7 @@ head(mtcars)
 ```
 
 ## Dependencies 
-
-list of packages that are required for implementation
->Packages
+Graphics - default package on R
 
 ## Code example 
 ```{r}

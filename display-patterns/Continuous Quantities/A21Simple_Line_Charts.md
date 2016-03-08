@@ -29,7 +29,7 @@ automobile design and performance for 32 automobiles (1973–74 models).
 Dependencies
 ------------
 
-list of packages that are required for implementation &gt;Packages
+Graphics - default package on R
 
 Code example
 ------------
