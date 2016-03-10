@@ -1,0 +1,56 @@
+---
+output: md_document
+---
+
+# R IMPLEMENTATION
+
+
+## Data Set
+
+```{r}
+head(mtcars)
+
+```
+
+## Dependences  
+
+* Lattice
+* ggplot2
+
+## Code Example
+
+### Graphics
+
+```{r}
+radius <- sqrt( mtcars$cyl/ pi )
+symbols(mtcars$wt,mtcars$mpg, circles=radius,inches=0.17, fg="blue", bg="blue", xlab="Car Weight", ylab="Miles per Gallon", main="Bubble Chart by Milles per Gallon and  Car Weight")
+legend("topright", legend=c(4,6,8), col="blue",title = "cyl", pch=16, cex= 1.8, pt.cex=3:5)
+
+```
+
+
+### Lattice
+
+```{r}
+library(lattice)
+xyplot(mtcars$mpg~mtcars$wt, aspect = 2/3,
+       grid = TRUE,
+       cex = sqrt( mtcars$cyl/ pi )*2.3, fill.color = rep("blue",40), 
+       col = "blue",main="Bubble Chart by Milles per Gallon and  Car Weight", 
+       xlab="Car Weight", ylab="Miles per Gallon",
+       panel = function(x, y, ..., cex, fill.color, subscripts) {
+         panel.xyplot(x, y, cex = cex[subscripts],
+                      pch = 21, fill = fill.color[subscripts], ...)
+       })
+```
+
+
+### ggplot2
+```{r}
+library (ggplot2)
+g <- ggplot(mtcars, aes(wt, mpg, size = cyl))+geom_point(colour="blue") + scale_size_continuous(range=c(6,10))
+g + labs(list(title = "Bubble Chart by Milles per Gallon and  Car Weight",  x="Car Weight", y="Miles per Gallon"))
+
+```
+
+## References
