@@ -17,12 +17,38 @@ list of Modules that are required for implementation
 
 ### Code Example With Matplotlib
 
+<<fig = True, width = '12 cm', echo = False>>=
+import matplotlib.pyplot as plt
+from datos import data
 
-![](figures/A21Simple_Line_Charts_figure1_1.png)\
+d=data('mtcars')
+t =d.am
+s =d.gear
+plt.xlim(0,1.2)
+plt.plot(t,s)
+plt.xlabel('Transmission (0 = automatic, 1 = manual)')
+plt.ylabel('Number of forward gears')
+plt.title('Motor Trend Car Road Tests')
+plt.grid(True)
+plt.show()
 
+@
 
 ### Code Example With Seaborn
 
+<<fig = True, width = '12 cm', echo = False>>=
+import matplotlib.pyplot as plt
+import seaborn as sns
+from datos import data
 
-![](figures/A21Simple_Line_Charts_figure2_1.png)\
+d=data('mtcars')
+t =d.am
+s =d.gear
+sns.set_style("whitegrid")
+plt.plot(t,s)
+plt.xlabel('Transmission (0 = automatic, 1 = manual)')
+plt.ylabel('Number of forward gears')
+plt.title('Motor Trend Car Road Tests')
+plt.show()
 
+@
