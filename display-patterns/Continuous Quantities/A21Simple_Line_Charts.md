@@ -29,4 +29,4 @@ list of Modules that are required for implementation
 ### Code Example With PyQtGraph 
 
 
-![](figures/A21Simple_Line_Charts_figure2_3.png)\
+![](figures/A21Simple_Line_Charts_figure3_1.png)\
