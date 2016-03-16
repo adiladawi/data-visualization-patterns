@@ -1,4 +1,3 @@
-Pweave -f pandoc PyTemplate.Pnw
 # Python Implementation Pattern
 
 implementacion del patron en Python
@@ -30,4 +29,4 @@ list of Modules that are required for implementation
 ### Code Example With PyQtGraph 
 
 
-
+![](figures/A21Simple_Line_Charts_figure2_3.png)\
