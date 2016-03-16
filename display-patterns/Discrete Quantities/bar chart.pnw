@@ -1,0 +1,71 @@
+# PYTHON IMPLEMENTATION
+
+## Data Set
+
+## Dependences
+* Matplotlib
+* Seaborn
+* Vispy
+* Pyqtgraph
+
+## Code Example
+
+### Matplotlib
+
+<<fig = True, width = '12 cm', echo = False>>=
+import numpy as np
+import matplotlib.pyplot as plt
+import numpy as np
+from datos import data
+
+d=data('mtcars')
+plt.bar(d.wt,d.mpg, width, color="blue")
+plt.title('Simple Bar Chart: Car Distribution ', family='serif', size=16)
+plt.xlabel('', family= 'serif')
+plt.ylabel('Frequency', family='serif')
+plt.show()
+@
+
+
+### Seaborn
+
+<<fig = True, width = '12 cm', echo = False>>=
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from datos import data
+
+sns.set(style="white", context="talk")
+d=data('mtcars')
+
+# Set up the matplotlib figure
+f, (ax1) = plt.subplots()
+sns.barplot(d.wt,d.mpg, palette="BuGn_d")
+ax1.set_titles("Simple Bar Chart: Car Distribution")
+ax1.set_ylabel("Frequency")
+ax1.set_xlabel("Number of Gears")
+plt.show()
+@
+
+### Vispy
+
+### Pyqtgraph
+
+<<fig = True, width = '12 cm', echo = False>>=
+import pyqtgraph as pg
+from pyqtgraph.Qt import QtCore, QtGui
+from datos import data
+
+d=data('mtcars')
+win = pg.plot()
+win.setWindowTitle('Simple Bar Chart: Car Distribution')
+bg1 = pg.BarGraphItem(x=d.wt, height=dt.mpg, width=0.6, brush='b')
+win.addItem(bg1)
+
+if __name__ == '__main__':
+    import sys
+    if (sys.flags.interactive != 1) or not hasattr(QtCore, 'PYQT_VERSION'):
+        QtGui.QApplication.instance().exec_()
+@
+
+### References

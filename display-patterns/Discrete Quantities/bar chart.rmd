@@ -1,0 +1,56 @@
+---
+output: html_document
+---
+
+# R IMPLEMENTATION
+
+## Data Set
+
+```{r}
+table(mtcars$gear)
+
+```
+
+
+## Dependences
+
+* graphics
+* lattice
+* ggplot2
+
+
+## Code Example
+
+
+
+### Graphics
+
+```{r}
+counts <- table(mtcars$gear)
+barplot(counts, main="Car Distribution", xlab="Number of Gears", ylab="Frequency", col="grey")
+
+```
+
+
+### Lattice
+
+
+```{r}
+library("lattice")
+counts <- table(mtcars$gear)
+barchart(counts, main="Car Distribution", xlab="Number of Gears",ylab="Frequency", horizontal="false", col="grey")
+
+```
+
+
+### ggplot2
+
+```{r}
+library("ggplot2")
+g <- ggplot(mtcars, aes(gear)) + geom_bar(fill = "gray", colour = "green", , binwidth = 0.5)
+g + labs(list(title = "Car Distribution", x="Number of Gears", y="Frequency"))
+
+```
+
+
+## References
