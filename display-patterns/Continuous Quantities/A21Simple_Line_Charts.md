@@ -26,3 +26,8 @@ list of Modules that are required for implementation
 
 ![](figures/A21Simple_Line_Charts_figure2_1.png)\
 
+
+### Code Example With PyQtGraph 
+
+
+
