@@ -14,7 +14,7 @@
 
 ### Matplotlib
 
-<<fig = True, width = '12 cm', echo = False>>=
+<<fig = True, width = '12 cm', echo = True>>=
 import numpy as np
 import matplotlib.pyplot as plt
 from datos import data
@@ -27,39 +27,25 @@ plt.show()
 @
 
 ### Seaborn
-<<fig = True, width = '12 cm', echo = False>>=
-import numpy as np
-import matplotlib as mpl
-import matplotlib.pyplot as plt
-from datos import data
-import seaborn as sns
 
-sns.set(style="whitegrid", color_codes=True)
+<<fig = True, width = '12 cm', echo = True>>=
+import matplotlib.pyplot as plt
+import seaborn as sns
+from datos import data
+
 d=data('mtcars')
-sns.stripplot(x=d.wt, y=d.mpg, data=d);
-plt.title('Scatterplots by Milles per Gallon and  Car Weight', family='serif', size=16)
-plt.xlabel('Car Weight', family= 'serif')
-plt.ylabel('Miles per Gallon', family='serif')
+sns.set(style="white")
+g = sns.FacetGrid(d)
+g.map(plt.scatter, "wt", "mpg")
+plt.title("Scatterplot by Milles per Gallon and  Car Weight", family='serif', size=16)
+g.set_axis_labels("Car Weight","Milles per Gallon")
 plt.show()
 @
 
-### Vispy
-
-<<fig = True, width = '12 cm', echo = False>>=
-import vispy.plot as vp
-import numpy as np
-from datos import data
-d=data('mtcars')
-fig = vp.Fig()
-fig[0, 0].plot(d.wt, symbol='o', width=0.0, marker_size=4.0, edge_color='b', edge_width=5.0)
-
-if __name__ == '__main__':
-    fig.app.run()
-@
 
 ### Pyqtgraph
 
-<<fig = True, width = '12 cm', echo = False>>=
+<<fig = True, width = '12 cm', echo = True>>=
 import pyqtgraph as pg
 from pyqtgraph.Qt import QtCore, QtGui
 import numpy as np
