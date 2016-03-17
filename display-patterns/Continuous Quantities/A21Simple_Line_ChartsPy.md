@@ -11,22 +11,23 @@ For this example it will be used Data Set called mtcars, this data set is the R 
 list of Modules that are required for implementation
 > Matplotlib
 > Seaborn
+> PyQtGraph
 
 ## Code example 
 
 ### Code Example With Matplotlib
 
 
-![](figures/A21Simple_Line_Charts_figure1_1.png)\
+![](figures/A21Simple_Line_Charts_figure1_1.png)
 
 
 ### Code Example With Seaborn
 
 
-![](figures/A21Simple_Line_Charts_figure2_1.png)\
+![](figures/A21Simple_Line_Charts_figure2_1.png)
 
 
 ### Code Example With PyQtGraph 
 
 
-![](figures/A21Simple_Line_Charts_figure3_1.png)\
+![](figures/A21Simple_Line_Charts_figure3_1.png)
