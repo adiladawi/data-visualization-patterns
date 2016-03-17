@@ -1,4 +1,4 @@
-# A 1.1: SCATTERPLOT
+`# A 1.1: SCATTERPLOT
 
 
 ## Description
@@ -28,4 +28,4 @@ In short: A picture says more than a thousand table rows. While human perception
 
 ## Related Patterns
 
-A1.2 BUBBLE CHART
+![](imagenes/A11Scatterplot.png)

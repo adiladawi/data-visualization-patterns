@@ -29,7 +29,7 @@ The Bubble Chart pattern is a convenient alternative to pseudo-3D diagrams that 
 
 ## Related Patterns
 
-A1.2 SCATTERPLOT
+![](imagenes/A12Bubble_Chart.png)
 
 
 ----------

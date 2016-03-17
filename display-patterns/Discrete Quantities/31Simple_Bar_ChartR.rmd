@@ -1,8 +1,9 @@
 ---
-output: html_document
+output: md_document
 ---
 
 # R IMPLEMENTATION
+
 
 ## Data Set
 
@@ -14,13 +15,11 @@ table(mtcars$gear)
 
 ## Dependences
 
-* graphics
 * lattice
 * ggplot2
 
 
 ## Code Example
-
 
 
 ### Graphics
@@ -33,7 +32,6 @@ barplot(counts, main="Car Distribution", xlab="Number of Gears", ylab="Frequency
 
 
 ### Lattice
-
 
 ```{r}
 library("lattice")
