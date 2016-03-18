@@ -15,7 +15,8 @@
 
 ### Matplotlib
 
-<<fig = True, width = '12 cm', echo = True>>=
+
+~~~~{.python}
 import matplotlib.pyplot as plt
 from datos import data
 import pandas
@@ -25,16 +26,21 @@ ps = pandas.Series([i for i in d.gear])
 counts = ps.value_counts()
 
 plt.bar(counts.index,counts,0.35, color="blue")
-plt.title('Simple Bar Chart: Car Distribution ', family='serif', size=16)
+plt.title('Simple Bar Chart: Car Distribution ', family='serif',
+size=16)
 plt.xlabel('Number of Gears', family= 'serif')
 plt.ylabel('Frequency', family='serif')
 plt.show()
-@
+~~~~~~~~~~~~~
+
+![](figures/31Simple_Bar_ChartPy_figure1_1.png){width=12 cm}
+
 
 
 ### Seaborn
 
-<<fig = True, width = '12 cm', echo = True>>=
+
+~~~~{.python}
 import seaborn as sns
 import matplotlib.pyplot as plt
 from datos import data
@@ -52,12 +58,16 @@ ax1.set_title("Simple Bar Chart: Car Distribution")
 ax1.set_ylabel("Frequency")
 ax1.set_xlabel("Number of Gears")
 plt.show()
-@
+~~~~~~~~~~~~~
+
+![](figures/31Simple_Bar_ChartPy_figure2_1.png){width=12 cm}
+
 
 
 ### Pyqtgraph
 
-<<fig = True, width = '12 cm', echo = True>>=
+
+~~~~{.python}
 import pyqtgraph as pg
 from pyqtgraph.Qt import QtCore, QtGui
 from datos import data
@@ -68,7 +78,8 @@ ps = pandas.Series([i for i in d.gear])
 counts = ps.value_counts()
 
 win = pg.plot(title='Simple Bar Chart')
-bg1 = pg.BarGraphItem(x=counts.index, height=counts, width=0.6, brush='b')
+bg1 = pg.BarGraphItem(x=counts.index, height=counts, width=0.6,
+brush='b')
 win.addItem(bg1)
 win.setTitle('Simple Bar Chart: Car Distribution')
 win.setLabel('left', "Frequency", )
@@ -76,8 +87,11 @@ win.setLabel('bottom', "Number of Gears")
 
 if __name__ == '__main__':
     import sys
-    if (sys.flags.interactive != 1) or not hasattr(QtCore, 'PYQT_VERSION'):
+    if (sys.flags.interactive != 1) or not hasattr(QtCore,
+'PYQT_VERSION'):
         QtGui.QApplication.instance().exec_()
-@
+~~~~~~~~~~~~~
+![](figures/31Simple_Bar_ChartPy_figure3_1.png){width=12 cm}
+
 
 ### References
