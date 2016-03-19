@@ -56,7 +56,7 @@ Graphics - default package on R Ggplot2 Lattice \#\# Code example
       geom_point()
 
 ![](A21Simple_Line_Charts_files/figure-markdown_strict/unnamed-chunk-3-1.png)<!-- -->
-\#\#\# Code Example With Graphics
+\#\#\# Code Example With Lattice
 
     library(lattice)
     panel.spline <- function(x, y) {

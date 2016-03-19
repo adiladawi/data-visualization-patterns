@@ -16,7 +16,7 @@ list of Modules that are required for implementation
 
 ### Code Example With Matplotlib
 
-<<fig = True, width = '12 cm', echo = False>>=
+<<fig = True, width = '12 cm', echo = True>>=
 import matplotlib.pyplot as plt
 from datos import data
 
@@ -35,7 +35,7 @@ plt.show()
 
 ### Code Example With Seaborn
 
-<<fig = True, width = '12 cm', echo = False>>=
+<<fig = True, width = '12 cm', echo = True>>=
 import matplotlib.pyplot as plt
 import seaborn as sns
 from datos import data
@@ -54,7 +54,7 @@ plt.show()
 
 ### Code Example With PyQtGraph 
 
-<<fig = True, width = '12 cm', echo = False>>=
+<<fig = True, width = '12 cm', echo = True>>=
 from pyqtgraph.Qt import QtGui, QtCore
 import pyqtgraph as pg
 from datos import data

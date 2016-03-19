@@ -1,0 +1,60 @@
+---
+output: md_document
+---
+
+# R Implementation Pattern
+
+implementacion del patron en R
+
+## Data Set
+
+For this example it will be used Data Set called mtcars, this data set is the R default data set this data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models).
+
+```{r}
+head(mtcars)
+
+```
+
+## Dependencies 
+
+> Graphics - default package on R
+> Ggplot2 
+> Lattice
+
+## Code example 
+
+### Code Example With Graphics
+
+```{r}
+carb <- mtcars$carb
+cyl <- mtcars$cyl
+
+plot(carb, type="o", col="blue", ylim=c(0,10))
+
+lines(cyl, type="o", pch=22, lty=2, col="red")
+
+title(main="Mtcars", col.main="Blue", font.main=4)
+
+```
+### Code Example With Ggplot
+```{r}
+library(ggplot2)
+
+df2 <- mtcars
+ggplot(data=df2, aes(x=mpg, y=hp, group=gear)) +
+  geom_line()+
+  geom_point()
+  
+```
+### Code Example With Lattice
+```{r}
+
+library(lattice)
+L = mtcars$am == 0 
+Camaro=mtcars["Camaro Z28",]
+Datsun=mtcars["Datsun 710",]
+x= 1:11
+df <- data.frame(Camaro = Camaro, Datsun = Datsun, x = x)
+xyplot(Camaro + Datsun  ~ x, data = df, type = "o", auto.key=TRUE)
+
+```

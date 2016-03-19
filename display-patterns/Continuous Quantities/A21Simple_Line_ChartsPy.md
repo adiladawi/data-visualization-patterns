@@ -11,23 +11,79 @@ For this example it will be used Data Set called mtcars, this data set is the R 
 list of Modules that are required for implementation
 > Matplotlib
 > Seaborn
-> PyQtGraph
 
 ## Code example 
 
 ### Code Example With Matplotlib
 
 
-![](figures/A21Simple_Line_Charts_figure1_1.png)
+~~~~{.python}
+import matplotlib.pyplot as plt
+from datos import data
+
+d=data('mtcars')
+t =d.am
+s =d.gear
+plt.xlim(0,1.2)
+plt.plot(t,s)
+plt.xlabel('Transmission (0 = automatic, 1 = manual)')
+plt.ylabel('Number of forward gears')
+plt.title('Motor Trend Car Road Tests')
+plt.grid(True)
+plt.show()
+~~~~~~~~~~~~~
+
+![](figures/A21Simple_Line_Charts_figure1_1.png)\
 
 
 ### Code Example With Seaborn
 
 
-![](figures/A21Simple_Line_Charts_figure2_1.png)
+~~~~{.python}
+import matplotlib.pyplot as plt
+import seaborn as sns
+from datos import data
+
+d=data('mtcars')
+t =d.am
+s =d.gear
+sns.set_style("whitegrid")
+plt.plot(t,s)
+plt.xlabel('Transmission (0 = automatic, 1 = manual)')
+plt.ylabel('Number of forward gears')
+plt.title('Motor Trend Car Road Tests')
+plt.show()
+~~~~~~~~~~~~~
+
+![](figures/A21Simple_Line_Charts_figure2_1.png)\
 
 
 ### Code Example With PyQtGraph 
 
 
-![](figures/A21Simple_Line_Charts_figure3_1.png)
+~~~~{.python}
+from pyqtgraph.Qt import QtGui, QtCore
+import pyqtgraph as pg
+from datos import data
+d=data("mtcars")
+
+app = QtGui.QApplication([])
+view = pg.GraphicsView()
+l = pg.GraphicsLayout(border=(100,100,100))
+view.setCentralItem(l)
+view.show()
+view.setWindowTitle('Simple Line Chart Example')
+view.resize(800,600)
+
+p1 = l.addPlot(title="Motor Trend Car Road Tests")
+p1.plot(d.am,d.gear)
+
+
+if __name__ == '__main__':
+    import sys
+    if (sys.flags.interactive != 1) or not hasattr(QtCore,
+'PYQT_VERSION'):
+        QtGui.QApplication.instance().exec_()
+~~~~~~~~~~~~~
+
+

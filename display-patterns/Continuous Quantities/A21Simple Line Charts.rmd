@@ -38,7 +38,7 @@ ggplot(data=mtcars, aes(x=mtcars$wt, y=mtcars$mpg))+
   geom_point()
 
 ```
-### Code Example With Graphics
+### Code Example With Lattice
 ```{r}
 library(lattice)
 panel.spline <- function(x, y) {
