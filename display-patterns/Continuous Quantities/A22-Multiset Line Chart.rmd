@@ -37,6 +37,7 @@ title(main="Mtcars", col.main="Blue", font.main=4)
 
 ```
 ### Code Example With Ggplot
+
 ```{r}
 library(ggplot2)
 
@@ -47,6 +48,7 @@ ggplot(data=df2, aes(x=mpg, y=hp, group=gear)) +
   
 ```
 ### Code Example With Lattice
+
 ```{r}
 
 library(lattice)
