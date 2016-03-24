@@ -1,6 +1,6 @@
 # Python Implementation Pattern
 
-implementacion del patron en Python
+A multiple line chart is a graphic in which show multiple data series and allows a more graphic visual comparison between the different data groups. 
 
 ## Data Set
 
@@ -17,65 +17,74 @@ list of Modules that are required for implementation
 
 ### Code Example With Matplotlib
 
-<<fig = True, width = '12 cm', echo = True>>=
-import matplotlib.pyplot as plt
+
+~~~~{.python}
+
 from datos import data
+import matplotlib.pyplot as plt
 
 d=data('mtcars')
-t =d.am
-s =d.gear
-plt.xlim(0,1.2)
-plt.plot(t,s)
-plt.xlabel('Transmission (0 = automatic, 1 = manual)')
-plt.ylabel('Number of forward gears')
-plt.title('Motor Trend Car Road Tests')
-plt.grid(True)
-plt.show()
 
-@
+carb=d.carb
+wt= d.wt
+
+plt.ylim(0,11)
+plt.title('Motor Trend Car Road Tests Carb and wt')
+plt.plot(carb , '--',wt, '--')
+plt.show()
+~~~~~~~~~~~~~
+
+![](figures/A22Multiset_Line_Chart_figure1_1.png)\
+
 
 ### Code Example With Seaborn
 
-<<fig = True, width = '12 cm', echo = True>>=
+
+~~~~{.python}
+
 import matplotlib.pyplot as plt
 import seaborn as sns
 from datos import data
 
 d=data('mtcars')
-t =d.am
-s =d.gear
-sns.set_style("whitegrid")
-plt.plot(t,s)
-plt.xlabel('Transmission (0 = automatic, 1 = manual)')
-plt.ylabel('Number of forward gears')
-plt.title('Motor Trend Car Road Tests')
-plt.show()
+t=d.carb
+s= d.wt
 
-@
+sns.set_style("whitegrid")
+plt.plot(t,'--',s,'--')
+plt.title('Motor Trend Car Road Tests Carb and wt')
+plt.show()
+~~~~~~~~~~~~~
+
+![](figures/A22Multiset_Line_Chart_figure2_1.png)\
+
 
 ### Code Example With PyQtGraph 
 
-<<fig = True, width = '12 cm', echo = True>>=
-from pyqtgraph.Qt import QtGui, QtCore
+
+~~~~{.python}
+
 import pyqtgraph as pg
+from pyqtgraph.Qt import QtCore, QtGui
 from datos import data
-d=data("mtcars")
 
-app = QtGui.QApplication([])
-view = pg.GraphicsView()
-l = pg.GraphicsLayout(border=(100,100,100))
-view.setCentralItem(l)
-view.show()
-view.setWindowTitle('Simple Line Chart Example')
-view.resize(800,600)
+d=data('mtcars')
+t=d.carb
+s= d.wt
 
-p1 = l.addPlot(title="Motor Trend Car Road Tests")
-p1.plot(d.am,d.gear)
+plt = pg.plot()
+plt.setWindowTitle('pyqtgraph example: Legend')
+plt.addLegend()
 
+c1 = plt.plot(t, pen='r',name='red plot')
+c2 = plt.plot(s, pen='g', fillLevel=0, name='green plot')
 
 if __name__ == '__main__':
     import sys
-    if (sys.flags.interactive != 1) or not hasattr(QtCore, 'PYQT_VERSION'):
+    if (sys.flags.interactive != 1) or not hasattr(QtCore,
+'PYQT_VERSION'):
         QtGui.QApplication.instance().exec_()
-        
-@
+~~~~~~~~~~~~~
+
+
+![](figures/A22Multiset_Line_Chart_figure3_1.png)

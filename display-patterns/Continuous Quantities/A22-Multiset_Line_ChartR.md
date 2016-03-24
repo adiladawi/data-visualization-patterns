@@ -1,7 +1,7 @@
 R Implementation Pattern
 ========================
 
-implementacion del patron en R
+A multiple line chart is a graphic in which show multiple data series and allows a more graphic visual comparison between the different data groups. 
 
 Data Set
 --------
@@ -41,7 +41,8 @@ Code example
     title(main="Mtcars", col.main="Blue", font.main=4)
 
 ![](A22-Multiset_Line_Chart_files/figure-markdown_strict/unnamed-chunk-2-1.png)<!-- -->
-\#\#\# Code Example With Ggplot
+
+### Code Example With Ggplot
 
     library(ggplot2)
 
@@ -51,7 +52,8 @@ Code example
       geom_point()
 
 ![](A22-Multiset_Line_Chart_files/figure-markdown_strict/unnamed-chunk-3-1.png)<!-- -->
-\#\#\# Code Example With Lattice
+
+### Code Example With Lattice
 
     library(lattice)
     L = mtcars$am == 0 

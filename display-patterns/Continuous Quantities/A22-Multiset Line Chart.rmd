@@ -4,7 +4,7 @@ output: md_document
 
 # R Implementation Pattern
 
-implementacion del patron en R
+A multiple line chart is a graphic in which show multiple data series and allows a more graphic visual comparison between the different data groups. 
 
 ## Data Set
 
@@ -36,6 +36,7 @@ lines(cyl, type="o", pch=22, lty=2, col="red")
 title(main="Mtcars", col.main="Blue", font.main=4)
 
 ```
+
 ### Code Example With Ggplot
 
 ```{r}
@@ -47,6 +48,7 @@ ggplot(data=df2, aes(x=mpg, y=hp, group=gear)) +
   geom_point()
   
 ```
+
 ### Code Example With Lattice
 
 ```{r}
