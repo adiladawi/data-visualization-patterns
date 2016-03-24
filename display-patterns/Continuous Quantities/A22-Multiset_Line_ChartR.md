@@ -40,7 +40,7 @@ Code example
 
     title(main="Mtcars", col.main="Blue", font.main=4)
 
-![](A22-Multiset_Line_Chart_files/figure-markdown_strict/unnamed-chunk-2-1.png)<!-- -->
+![](A22-Multiset_Line_Chart_files/figure-markdown_strict/unnamed-chunk-2-1.png)
 
 ### Code Example With Ggplot
 
@@ -51,7 +51,7 @@ Code example
       geom_line()+
       geom_point()
 
-![](A22-Multiset_Line_Chart_files/figure-markdown_strict/unnamed-chunk-3-1.png)<!-- -->
+![](A22-Multiset_Line_Chart_files/figure-markdown_strict/unnamed-chunk-3-1.png)
 
 ### Code Example With Lattice
 
@@ -67,4 +67,4 @@ Code example
 
     xyplot(Camaro + Datsun  ~ x, data = df, type = "o", auto.key=TRUE)
 
-![](A22-Multiset_Line_Chart_files/figure-markdown_strict/unnamed-chunk-4-1.png)<!-- -->
+![](A22-Multiset_Line_Chart_files/figure-markdown_strict/unnamed-chunk-4-1.png)

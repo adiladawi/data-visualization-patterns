@@ -37,7 +37,7 @@ Graphics - default package on R Ggplot2 Lattice \#\# Code example
     plot(cars, type="o", col="blue")
     title(main="Cars", col.main="blue", font.main=4)
 
-![](A21Simple_Line_Charts_files/figure-markdown_strict/unnamed-chunk-2-1.png)<!-- -->
+![](A21Simple_Line_Charts_files/figure-markdown_strict/unnamed-chunk-2-1.png)
 \#\#\# Code Example With Ggplot
 
     head(mtcars)
@@ -55,7 +55,7 @@ Graphics - default package on R Ggplot2 Lattice \#\# Code example
       geom_line()+
       geom_point()
 
-![](A21Simple_Line_Charts_files/figure-markdown_strict/unnamed-chunk-3-1.png)<!-- -->
+![](A21Simple_Line_Charts_files/figure-markdown_strict/unnamed-chunk-3-1.png)
 \#\#\# Code Example With Lattice
 
     library(lattice)
@@ -72,4 +72,4 @@ Graphics - default package on R Ggplot2 Lattice \#\# Code example
     xyplot(mpg~wt, scales=list(cex=2, col="red"),
            panel=panel.spline)
 
-![](A21Simple_Line_Charts_files/figure-markdown_strict/unnamed-chunk-4-1.png)<!-- -->
+![](A21Simple_Line_Charts_files/figure-markdown_strict/unnamed-chunk-4-1.png)
