@@ -1,0 +1,57 @@
+---
+output: md_document
+---
+
+# R IMPLEMENTATION
+
+
+## Data Set
+
+```{r}
+counts <- table(mtcars$cyl, mtcars$gear)
+counts
+```
+
+
+## Dependences
+
+* lattice
+* ggplot2
+
+
+## Code Example
+
+
+### Graphics
+
+```{r}
+counts <- table(mtcars$cyl, mtcars$gear)
+barplot(counts, main="Car Distribution by Gears and Cyl",
+  xlab="Number of Gears", ylab="Frequency", col=c("darkblue","red"),
+ 	legend = rownames(counts), beside=TRUE)
+
+```
+
+
+### Lattice
+
+```{r}
+library("lattice")
+counts <- table(mtcars$gear, mtcars$cyl)
+barchart(counts, stack = FALSE, horizontal="false", main="Car Distribution by Gears and Cyl",     xlab="Number of Gears", ylab="Frequency",
+         auto.key = list(space="top", columns=3, title="Cyl", cex.title=1))
+
+```
+
+
+### ggplot2
+
+```{r}
+library("ggplot2")
+g <- ggplot(mtcars, aes(factor(gear), fill=factor(cyl))) + geom_bar( position = "dodge")
+g + labs(list(title = "Car Distribution by Gears and Cyl", x="Number of Gears", y="Frequency"))
+
+```
+
+
+## References
