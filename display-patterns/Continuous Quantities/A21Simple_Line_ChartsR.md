@@ -38,7 +38,8 @@ Graphics - default package on R Ggplot2 Lattice \#\# Code example
     title(main="Cars", col.main="blue", font.main=4)
 
 ![](A21Simple_Line_Charts_files/figure-markdown_strict/unnamed-chunk-2-1.png)
-\#\#\# Code Example With Ggplot
+
+### Code Example With Ggplot
 
     head(mtcars)
 
@@ -56,7 +57,8 @@ Graphics - default package on R Ggplot2 Lattice \#\# Code example
       geom_point()
 
 ![](A21Simple_Line_Charts_files/figure-markdown_strict/unnamed-chunk-3-1.png)
-\#\#\# Code Example With Lattice
+
+### Code Example With Lattice
 
     library(lattice)
     panel.spline <- function(x, y) {
