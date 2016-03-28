@@ -20,4 +20,6 @@ Create a two-dimensional Cartesian coordinate system. Label and subdivide the tw
 Set within a Cartesian coordinate system, line charts are one of the most common and most widely used diagram types. The expressive power of this type of infographic lies in the user’s ability to interpret the development of a magnitude over an interval, such as time, by merely looking at the way the graph line “moves” from left to right. Even without detailed information at hand, a quick glance at the “big picture“ provides valuable insight to the data already.
 
 # Related Patterns
-A 2.1: Simple Line Chart
+
+A 2.2 Multiset Line Chart
+A 2.4 Sparklines
