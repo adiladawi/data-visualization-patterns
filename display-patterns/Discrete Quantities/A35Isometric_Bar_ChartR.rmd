@@ -1,0 +1,49 @@
+---
+output: md_document
+---
+
+# R IMPLEMENTATION
+
+
+## Data Set
+
+```{r}
+counts <- table(mtcars$cyl, mtcars$gear)
+counts
+
+```
+
+
+## Dependences
+
+* lattice
+* ggplot2
+
+
+## Code Example
+
+
+### Graphics
+
+```{r}
+
+```
+
+
+### Lattice
+
+```{r}
+
+
+```
+
+
+### ggplot2
+
+```{r}
+
+
+```
+
+
+## References

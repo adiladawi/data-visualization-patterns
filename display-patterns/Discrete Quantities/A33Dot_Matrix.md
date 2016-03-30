@@ -25,11 +25,12 @@ Note that you can only display one dataset per matrix. If your data consists of 
 
 ## Rationale
 
-Traditional chart variations are useful to visualize proportions or continuous values. But
-for the task of counting things and displaying their total number (or, in more professional terms, displaying discrete values), these diagrams lack certain abilities. As Austrian sociologist Otto Neurath pointed out in his studies on visual education tools in the mid-1920s, traditional diagram forms such as bar or pie charts are not the most appropriate
-form to display such countable quantities. Instead, he proposed the design of symbols that represent a certain amount of a variable: For instance, the pictogram of a man stands for 10,000 unemployed workers in a social statistics chart. Being able to count the magnitude of a variable, Neurath concluded, significantly increases the experience for the observer (Behrens, 2008).
+Traditional chart variations are useful to visualize proportions or continuous values. But for the task of counting things and displaying their total number (or, in more professional terms, displaying discrete values), these diagrams lack certain abilities. As Austrian sociologist Otto Neurath pointed out in his studies on visual education tools in the mid-1920s, traditional diagram forms such as bar or pie charts are not the most appropriate form to display such countable quantities. Instead, he proposed the design of symbols that represent a certain amount of a variable: For instance, the pictogram of a man stands for 10,000 unemployed workers in a social statistics chart. Being able to count the magnitude of a variable, Neurath concluded, significantly increases the experience for the observer (Behrens, 2008).
 
 
 ## Related Patterns
 
-![](imagenes/A33Dot_Matrix.png)
+* A 3.1 Simple Bar Chart
+* A 3.2 Multiset Bar Chart
+* A 3.5 Isometric Bar Chart
+* A 4.2 Ring Chart
