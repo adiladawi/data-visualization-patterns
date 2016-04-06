@@ -5,8 +5,9 @@
 
 <<fig = False,  width = '12 cm', echo = True>>=
 from datos import data
+
 d=data('mtcars')
-d.head()
+t1 = d.pivot_table( values = 'carb',index=['cyl'], columns = ['gear'], aggfunc =
 @
 
 
@@ -27,7 +28,6 @@ d.head()
 import numpy as np
 import matplotlib.pyplot as plt
 from datos import data
-import pandas
 
 d=data('mtcars')
 t1 = d.pivot_table( values = 'carb',index=['cyl'], columns = ['gear'], aggfunc = len)
@@ -50,12 +50,11 @@ plt.show()
 import seaborn as sns
 import matplotlib.pyplot as plt
 from datos import data
-import pandas
 
 sns.set(style="whitegrid")
 d=data('mtcars')
-g = sns.factorplot("gear",hue="cyl", data=d,size=6, kind="count")
-g.set_axis_labels( "Number of Gears", "Frequency")
+sns.countplot(x="gear", hue="cyl", data=d)
+sns.axlabel( "Number of Gears", "Frequency")
 plt.title('Car Distribution by Gear and Cylindres', family='Serif', size=16)
 plt.show()
 @
@@ -68,7 +67,6 @@ from pyqtgraph.Qt import QtCore, QtGui
 import pyqtgraph as pg
 import numpy as np
 from datos import data
-import pandas
 
 d=data('mtcars')
 t1 = d.pivot_table( values = 'carb',index=['cyl'], columns = ['gear'], aggfunc = len)
