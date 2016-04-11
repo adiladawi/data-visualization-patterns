@@ -22,4 +22,5 @@ Set within a Cartesian coordinate system, line charts are one of the most common
 # Related Patterns
 
 A 2.2 Multiset Line Chart
+
 A 2.4 Sparklines

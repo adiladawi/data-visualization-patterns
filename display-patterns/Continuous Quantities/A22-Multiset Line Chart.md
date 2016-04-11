@@ -19,4 +19,5 @@ Obviously, the advantages of the simple line chart apply to the multivariate ext
 # Related Patterns
 
 A 2.1 Simple Line Chart
+
 A 2.3 Stacked Area Chart

@@ -19,5 +19,7 @@ Stacked area charts combine the widespread understanding of line charts with the
 # Related Patterns
 
 A 2.1 Simple Line Chart
+
 A 2.2 Multiset Line Chart
+
 A 5.1 Sankey Diagram
