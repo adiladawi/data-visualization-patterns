@@ -1,7 +1,10 @@
 R Implementation Pattern
 ========================
 
-implementacion del patron en R
+like charts Simple Line Chart, charts Stacked Area show a line graph 
+with the area painted increase, this area allows you to view a 
+mirrored by completing a total area colored advance, this kind of 
+graphs can show commonly two or more comparisons on a graph.
 
 Data Set
 --------
@@ -41,7 +44,7 @@ Code example
     datos<-data.frame(mtcars$cyl,mtcars$mpg)
     plot.area(datos,prop=F,horiz=T)
 
-![](A23-Stacked_Area_Chart_files/figure-markdown_strict/unnamed-chunk-2-1.png)<!-- -->
+![](A23-Stacked_Area_Chart_files/figure-markdown_strict/unnamed-chunk-2-1.png)
 
 ### Code Example With Ggplot2
 
@@ -54,4 +57,4 @@ Code example
 
     qplot(Type, Value, data = data.set, fill = Comparacion, geom = "area")
 
-![](A23-Stacked_Area_Chart_files/figure-markdown_strict/unnamed-chunk-3-1.png)<!-- -->
+![](A23-Stacked_Area_Chart_files/figure-markdown_strict/unnamed-chunk-3-1.png)
