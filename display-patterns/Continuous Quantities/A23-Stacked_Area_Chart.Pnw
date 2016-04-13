@@ -65,7 +65,7 @@ y1, y2 = c, m
 fig, ax = plt.subplots()
 ax.stackplot(x, y1, y2)
 sns.set_style("whitegrid")
-plt.title('Motor Trend Car Road Tests Carb and wt')
+plt.title('Motor Trend Car Road Tests Mpg and Cyl')
 plt.show()
 
 @

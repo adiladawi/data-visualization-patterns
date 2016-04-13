@@ -21,8 +21,7 @@ Plotly for Python an R is an interactive, browser-based charting library built o
 
 This example show a graph  between  mpg(miles per gallon) and Cyl(Cylinders) from data set Mtcars
 The orange area belongs to data Mpg and blue area belongs to data Cyl
-
-~~~~{.python}
+<<fig = True, width = '12 cm', echo = True>>=
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -40,16 +39,13 @@ ax.plot(y0, label='y0')
 ax.plot(y1, label='y1')
 
 update = {'data':[{'fill': 'tonexty'}]}
-plot_url = py.plot_mpl(fig, update=update, strip_style=True, filename
-='mpl-stacked-line')
-~~~~~~~~~~~~~
+plot_url = py.plot_mpl(fig, update=update, strip_style=True, filename='mpl-stacked-line')
 
-
+@
 
 ### Code Example With Seaborn
 
-
-~~~~{.python}
+<<fig = True, width = '12 cm', echo = True>>=
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -69,9 +65,7 @@ y1, y2 = c, m
 fig, ax = plt.subplots()
 ax.stackplot(x, y1, y2)
 sns.set_style("whitegrid")
-plt.title('Motor Trend Car Road Tests Mpg and Cyl')
+plt.title('Motor Trend Car Road Tests Carb and wt')
 plt.show()
-~~~~~~~~~~~~~
 
-![](figures/A23-Stacked_Area_Chart_figure2_1.png)\
-
+@
