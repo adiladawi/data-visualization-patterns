@@ -10,27 +10,36 @@ For this example it will be used Data Set called mtcars, this data set is the R 
 
 list of Modules that are required for implementation
 > Matplotlib
+>> Plotly 
+Plotly for Python an R is an interactive, browser-based charting library built on the open source JavaScript graphing library, plotly.js. It works entirely locally, through the HTML widgets framework. To use this depndence you nedd to have a plotly account. [https://plot.ly/python/]
+
 > Seaborn
-> PyQtGraph
 
 ## Code example 
 
-### Code Example With Matplotlib
+### Code Example With Matplotlib and Plotly
 
+This example show a graph  between  mpg(miles per gallon) and Cyl(Cylinders) from data set Mtcars
+The orange area belongs to data Mpg and blue area belongs to data Cyl
 <<fig = True, width = '12 cm', echo = True>>=
 
-from datos import data
+import numpy as np
 import matplotlib.pyplot as plt
+import plotly.plotly as py
+from datos import data
 
 d=data('mtcars')
+carb=d.cyl
+wt= d.mpg
+y0 = carb
+y1 = wt
 
-carb=d.carb
-wt= d.wt
+fig, ax = plt.subplots()
+ax.plot(y0, label='y0')
+ax.plot(y1, label='y1')
 
-plt.ylim(0,11)
-plt.title('Motor Trend Car Road Tests Carb and wt')
-plt.plot(carb , '--',wt, '--')
-plt.show()
+update = {'data':[{'fill': 'tonexty'}]}
+plot_url = py.plot_mpl(fig, update=update, strip_style=True, filename='mpl-stacked-line')
 
 @
 
@@ -41,40 +50,22 @@ plt.show()
 import matplotlib.pyplot as plt
 import seaborn as sns
 from datos import data
+import numpy as np
 
 d=data('mtcars')
-t=d.carb
-s= d.wt
+c=d.cyl
+m=d.mpg
 
+y = np.row_stack((c,m))
+x = np.arange(32)
+
+y1, y2 = c, m
+
+
+fig, ax = plt.subplots()
+ax.stackplot(x, y1, y2)
 sns.set_style("whitegrid")
-plt.plot(t,'--',s,'--')
 plt.title('Motor Trend Car Road Tests Carb and wt')
 plt.show()
 
-@
-
-### Code Example With PyQtGraph 
-
-<<fig = True, width = '12 cm', echo = True>>=
-
-import pyqtgraph as pg
-from pyqtgraph.Qt import QtCore, QtGui
-from datos import data
-
-d=data('mtcars')
-t=d.carb
-s= d.wt
-
-plt = pg.plot()
-plt.setWindowTitle('pyqtgraph example: Legend')
-plt.addLegend()
-
-c1 = plt.plot(t, pen='r',name='red plot')
-c2 = plt.plot(s, pen='g', fillLevel=0, name='green plot')
-
-if __name__ == '__main__':
-    import sys
-    if (sys.flags.interactive != 1) or not hasattr(QtCore, 'PYQT_VERSION'):
-        QtGui.QApplication.instance().exec_()
-        
 @
