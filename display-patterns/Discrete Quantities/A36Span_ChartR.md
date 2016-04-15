@@ -1,0 +1,37 @@
+R IMPLEMENTATION
+================
+
+Data Set
+--------
+
+Dependences
+-----------
+
+-   lattice
+-   ggplot2
+
+Code Example
+------------
+
+### Graphics
+
+### Lattice
+
+### ggplot2
+
+    library("ggplot2")
+    ci<-c(4,6,8)
+    x<-subset(mtcars, mtcars$cyl==4)
+    x<-range(x$mpg)
+    y<-subset(mtcars, mtcars$cyl==6)
+    y<-range(y$mpg)
+    z<-subset(mtcars, mtcars$cyl==8)
+    z<-range(z$mpg)
+    df<-data.frame(cyl=ci,from=c(x[1],y[1],z[1]), to=c(x[2],y[2],z[2]))
+    g <- ggplot(df, aes(cyl,to)) + geom_crossbar(aes(ymin = from, ymax = to), width = 0.8, fill="blue")
+    g + labs(list(title = "Range of Milles per Gallon (mpg) by Cylindres (cyl)",  x="Cylindres", y="Miles per Gallon"))
+
+![](A36Span_ChartR_files/figure-markdown_strict/unnamed-chunk-4-1.png)<!-- -->
+
+References
+----------

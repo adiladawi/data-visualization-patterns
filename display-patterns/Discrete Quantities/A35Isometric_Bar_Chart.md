@@ -1,6 +1,6 @@
 
 
-#A 3.4: STACKED BAR CHART
+#A 3.5: ISOMETRIC BAR CHART
 
 
 ## Description
@@ -12,7 +12,7 @@ Although the creation of a perspective structure is more complex than drawing a 
 
 ## Required Data
 
-Use an isometric bar chart to dis- play multiple datasets that consist, similarly to the Multiset Bar Chart pattern, of quantitative data items. Note that you can use several independent datasets, but that you have to make sure that each set contains the same nominal class of discrete items (Behrens, 2008).
+Use an isometric bar chart to display multiple datasets that consist, similarly to the Multiset Bar Chart pattern, of quantitative data items. Note that you can use several independent datasets, but that you have to make sure that each set contains the same nominal class of discrete items (Behrens, 2008).
 
 
 ## Usage
