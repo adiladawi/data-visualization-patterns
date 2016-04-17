@@ -1,0 +1,45 @@
+# PYTHON IMPLEMENTATION 
+
+
+## Data Set
+
+<<fig = False,  width = '12 cm', echo = True>>=
+from datos import data
+d=data('mtcars')
+d.head()
+@
+
+
+## Dependences
+
+* Matplotlib
+* Seaborn
+* Pyqtgraph
+* Pandas
+
+
+## Code Example
+
+
+### Matplotlib
+
+<<fig = True, width = '12 cm', echo = True>>=
+
+@
+
+
+### Seaborn
+
+<<fig = True, width = '12 cm', echo = True>>=
+
+@
+
+
+### Pyqtgraph
+
+<<fig = True, width = '12 cm', echo = True>>=
+
+@
+
+
+### References
