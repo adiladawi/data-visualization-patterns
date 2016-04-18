@@ -1,6 +1,6 @@
 # Python Implementation Pattern
 
-like charts Simple Line Chart, charts Stacked Area show a line graph with the area painted increase, this area allows you to view a mirrored by completing a total area colored advance, this kind of graphs can show commonly two or more comparisons on a graph 
+Like charts Simple Line Chart, charts Stacked Area show a line graph with the area painted increase, this area allows you to view a mirrored by completing a total area colored advance, this kind of graphs can show commonly two or more comparisons on a graph 
 
 ## Data Set
 
@@ -8,7 +8,7 @@ For this example it will be used Data Set called mtcars, this data set is the R 
 
 ## Dependencies 
 
-list of Modules that are required for implementation
+List of Modules that are required for implementation
 > Matplotlib
 >> Plotly 
 Plotly for Python an R is an interactive, browser-based charting library built on the open source JavaScript graphing library, plotly.js. It works entirely locally, through the HTML widgets framework. To use this depndence you nedd to have a plotly account. [https://plot.ly/python/]
@@ -44,7 +44,7 @@ plot_url = py.plot_mpl(fig, update=update, strip_style=True, filename
 ='mpl-stacked-line')
 ~~~~~~~~~~~~~
 
-
+![](figures/A23-Stacked_Area_Chart_figure1_1.png)
 
 ### Code Example With Seaborn
 
@@ -73,5 +73,5 @@ plt.title('Motor Trend Car Road Tests Mpg and Cyl')
 plt.show()
 ~~~~~~~~~~~~~
 
-![](figures/A23-Stacked_Area_Chart_figure2_1.png)\
+![](figures/A23-Stacked_Area_Chart_figure2_1.png)
 
