@@ -1,0 +1,51 @@
+---
+output: md_document
+---
+
+# R Implementation Pattern
+
+Simple Pie Chart is a graphic
+
+Then it shows an example of R pattern implementation.
+
+## Data Set
+
+For this example it will be used Data Set called mtcars, this data set is the R default data set this data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models).
+
+```{r}
+head(mtcars)
+
+```
+
+## Dependencies 
+Graphics - default package on R
+Ggplot2 
+Lattice
+## Code example 
+
+### Code Example With Graphics
+```{r}
+cars <- (mtcars$wt)
+plot(cars, type="o", col="blue")
+title(main="Cars", col.main="blue", font.main=4)
+```
+### Code Example With Ggplot
+```{r}
+head(mtcars)
+library(ggplot2)
+ggplot(data=mtcars, aes(x=mtcars$wt, y=mtcars$mpg))+
+  geom_line()+
+  geom_point()
+
+```
+### Code Example With Lattice
+```{r}
+library(lattice)
+panel.spline <- function(x, y) {
+  panel.xyplot(x, y) 
+  panel.loess(x, y) 
+}
+attach(mtcars)
+xyplot(mpg~wt, scales=list(cex=2, col="red"),
+       panel=panel.spline)
+```
