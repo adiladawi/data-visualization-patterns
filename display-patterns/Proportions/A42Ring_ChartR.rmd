@@ -1,0 +1,49 @@
+---
+output: md_document
+---
+
+# R IMPLEMENTATION
+
+
+## Data Set
+
+```{r}
+table(mtcars$cyl)
+
+```
+
+
+## Dependences
+
+* lattice
+* ggplot2
+
+
+## Code Example
+
+
+### Graphics
+
+```{r}
+
+```
+
+
+### Lattice
+
+```{r}
+
+```
+
+
+### ggplot2
+
+```{r}
+library(ggplot2)
+ggplot(mtcars, aes(x = gear, y = carb, fill = factor(carb))) + 
+  geom_bar(width = 0.85, stat="identity") +    
+  coord_polar(theta = "y") 
+```
+
+
+## References

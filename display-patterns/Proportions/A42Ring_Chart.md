@@ -21,7 +21,7 @@ Draw a set of concentric rings, one ring per dataset. Separate each ring into se
 
 ## Rationale
 
-Ring charts relate to pie charts just like stacked area charts to line diagrams: By incorporating several datasets of identical type and scale into the same representation, it is much easier for the user to make comparisons between these sets than having several pie charts standing next to each other. Another, more pragmatic advantage of this chart method is the space saving aspect: The more sets you  incorporate into one ring chart, the more area you save compared to a set of pie charts(Behrens, 2008).
+Ring charts relate to pie charts just like stacked area charts to line diagrams: By incorporating several datasets of identical type and scale into the same representation, it is much easier for the user to make comparisons between these sets than having several pie charts standing next to each other. Another, more pragmatic advantage of this chart method is the space saving aspect: The more sets you  incorporate into one ring chart, the more area you save compared to a set of pie charts (Behrens, 2008).
 
 
 ## Related Patterns
