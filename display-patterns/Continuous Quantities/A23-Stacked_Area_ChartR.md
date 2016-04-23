@@ -30,7 +30,7 @@ Dependencies
 > Graphics - default package on R
 
 For this example in graphics it will be used other dependence called
-plot\_area. this dependence is hosted in this link:
+plot\_area.R this dependence is hosted in this link:
 \[<https://gist.github.com/fawda123/6589541/raw/8de8b1f26c7904ad5b32d56ce0902e1d93b89420/plot_area.r>\]
 
 > Ggplot2
