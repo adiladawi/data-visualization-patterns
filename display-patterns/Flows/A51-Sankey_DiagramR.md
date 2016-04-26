@@ -41,7 +41,6 @@ Code example
 
     source('Sankey.R')
 
-    # My example (there is another example inside Sankey.R):
     mpg=mtcars["Datsun 710",1]
     hp=mtcars["Datsun 710",4]
     cyl=mtcars["Datsun 710",2]
@@ -58,13 +57,14 @@ Code example
                "1/4 mile time",
                "Number of forward gears",
                "Number of cylinders",
-               "Datsun 710\nGross horsepower\n")
+               "Datsun 710\nGross HP")
 
     SankeyR(inputs,losses,unit,labels)
 
-![](A51-Sankey_Diagram_files/figure-markdown_strict/unnamed-chunk-2-1.png)
+![](A51-Sankey_Diagram_files/figure-markdown_strict/unnamed-chunk-2-1.png)<!-- -->
 
-
+    # Clean up my mess
+    rm("inputs", "labels", "losses", "SankeyR", "unit")
 
 ### Code Example With GoogleVis
 
@@ -72,24 +72,6 @@ In this example, a package called GoogleVis google for R is used, this
 package generates Web graphics can also be used in desktop applications.
 
     require(googleVis)
-
-    ## Loading required package: googleVis
-
-    ## 
-    ## Welcome to googleVis version 0.5.10
-    ## 
-    ## Please read the Google API Terms of Use
-    ## before you start using the package:
-    ## https://developers.google.com/terms/
-    ## 
-    ## Note, the plot method of googleVis will by default use
-    ## the standard browser to display its output.
-    ## 
-    ## See the googleVis package vignettes for more details,
-    ## or visit http://github.com/mages/googleVis.
-    ## 
-    ## To suppress this message use:
-    ## suppressPackageStartupMessages(library(googleVis))
 
     mpg=mtcars["Datsun 710",1]
     hp=mtcars["Datsun 710",4]
@@ -103,7 +85,7 @@ package generates Web graphics can also be used in desktop applications.
                                  "Number of forward gears",
                                  "Number of cylinders",
                                  "Datsun 710 Gross horsepower"))),
-                      Weight=c(mpg,gear,0,0,0,0,cyl,hp))
+                      Weight=c(mpg,gear,cyl,hp))
 
     sk1 <- gvisSankey(dat, from="From", to="To", weight="Weight")
     plot(sk1)

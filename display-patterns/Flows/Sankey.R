@@ -125,7 +125,7 @@ lines(c(0.1,0,0.05,0,0.4), c(0,0,frInputs[1]/2,frInputs[1],frInputs[1]),lwd=w)
 
 # First input label
 inputLabel = paste(labels[1],": ",inputs[1]," ",unit," (",round(100*frInputs[1],digits=1),"%)",sep="")
-fontsize = max(0.5,frInputs[1]*2.5)
+fontsize = max(0.5,frInputs[1]*1.5)
 text(0, frInputs[1]/2, inputLabel, cex=fontsize, pos=2) # try pos=4
 
 # Set initial position for the top of the arrows
@@ -168,7 +168,7 @@ if(length(inputs)>1){
   xText = posBot-(rE+rI)*sin(phiText)/3
   yText = limBot-rE/1.5+(rE+rI)*cos(phiText)/2
   fullLabel = paste(labels[j],": ",inputs[j]," ",unit," (",round(100*frInputs[j],digits=1),"%)",sep="")
-  fontsize = max(0.5,frInputs[j]*2.5)
+  fontsize = max(0.5,frInputs[j]*1.5)
   text(xText, yText, fullLabel, cex=fontsize, pos=2)
 
  # save new bottom end of arrow
@@ -219,7 +219,7 @@ for(i in 1:(length(losses)-1)){
   txtX = posTop + rI + frLosses[i]/2
   txtY = limTop + rI + arTop + 0.05
   fullLabel = paste(labels[i+length(inputs)],": ",losses[i]," ",unit," (",round(100*frLosses[i],digits=1),"%)",sep="")
-  fontsize = max(0.5,frLosses[i]*2.5)
+  fontsize = max(0.5,frLosses[i]*.90)
   text(txtX, txtY, fullLabel, cex=fontsize, pos=4, srt=35)
 
  # Save new position of arrow top
@@ -250,7 +250,7 @@ newPos = newPos + 0.8*(frLosses[length(frLosses)])
 
 # Last loss label
 lossLabel = paste(labels[length(labels)],": ",losses[length(losses)]," ",unit," (",round(100*frLosses[length(losses)],digits=1),"%)",sep="")
-fontsize = max(0.5,frLosses[length(losses)]*2.5)
+fontsize = max(0.5,frLosses[length(losses)]*.90)
 text(newPos+0.05, limTop-frLosses[length(frLosses)]/2, lossLabel, cex=fontsize, pos=4) # try pos=4
 
 # Draw mid-line

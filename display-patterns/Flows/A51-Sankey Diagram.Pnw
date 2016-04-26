@@ -1,0 +1,45 @@
+# Python Implementation Pattern
+
+implementacion del patron en Python
+
+## Data Set
+
+For this example it will be used Data Set called mtcars, this data set is the R default data set, to use this data set, was used a Python module called rpy2, which is used to use data sets of R in python. This data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models).
+
+## Dependencies 
+
+list of Modules that are required for implementation
+> Matplotlib
+
+## Code example 
+
+### Code Example With Matplotlib
+
+<<fig = True, width = '12 cm', echo = False>>=
+
+import matplotlib.pyplot as plt
+from matplotlib.sankey import Sankey
+from matplotlib import pyplot
+from datos import data
+
+d=data('mtcars')
+mpg=d.loc["Datsun 710",'mpg']
+disp=d.loc["Datsun 710",'disp']
+qsec=d.loc["Datsun 710",'qsec']
+gear =d.loc["Datsun 710",'gear']
+cyl=d.loc["Datsun 710",'cyl']
+hp=d.loc["Datsun 710",'hp']
+
+fig, ax = plt.subplots(figsize=(15, 15))
+
+Sankey(ax,margin=10, flows=[disp, mpg,-qsec, -gear, -hp,-cyl,],
+       labels=['Displacement\n', 'Miles/(US) gallo', '1/4 Mile Time',
+            'Number of forward gears', 'Gross horsepower', 'Number of cylinders'],
+       orientations=[-1, 0, 1, 0, 0, 0]).finish()
+
+ax.axes.get_xaxis().set_visible(False)
+ax.axes.get_yaxis().set_visible(False)
+plt.title("Datsun 710 Sankey Diagram")
+plt.show()
+
+@
