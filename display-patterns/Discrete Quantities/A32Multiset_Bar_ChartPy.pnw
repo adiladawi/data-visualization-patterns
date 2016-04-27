@@ -7,7 +7,7 @@
 from datos import data
 
 d=data('mtcars')
-t1 = d.pivot_table( values = 'carb',index=['cyl'], columns = ['gear'], aggfunc =
+t1 = d.pivot_table( values = 'carb',index=['cyl'], columns = ['gear'], aggfunc = len)
 @
 
 
