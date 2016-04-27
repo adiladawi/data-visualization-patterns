@@ -15,7 +15,7 @@ list of Modules that are required for implementation
 
 ### Code Example With Matplotlib
 
-<<fig = True, width = '12 cm', echo = False>>=
+<<fig = True, width = '12 cm', echo = True>>=
 
 import matplotlib.pyplot as plt
 from matplotlib.sankey import Sankey
