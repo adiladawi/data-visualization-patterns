@@ -18,12 +18,9 @@ Dependences
 
 -   lattice
 -   latticeExtra
--   ggplot2
 
 Code Example
 ------------
-
-### Graphics
 
 ### Lattice
 
@@ -45,9 +42,7 @@ Code Example
           xbase=0.4, ybase=0.4, scales=list(arrows=FALSE, col=1), main="Car Distribution by Gears and Cyl", 
           par.settings = list(axis.line = list(col = "transparent")))
 
-![](A35Isometric_Bar_ChartR_files/figure-markdown_strict/unnamed-chunk-3-1.png)<!-- -->
-
-### ggplot2
+![](A35Isometric_Bar_ChartR_files/figure-markdown_strict/unnamed-chunk-2-1.png)<!-- -->
 
 References
 ----------
