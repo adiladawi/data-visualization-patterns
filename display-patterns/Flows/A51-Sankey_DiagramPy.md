@@ -8,7 +8,7 @@ For this example it will be used Data Set called mtcars, this data set is the R 
 
 ## Dependencies 
 
-list of Modules that are required for implementation
+List of Modules that are required for implementation
 > Matplotlib
 
 ## Code example 
