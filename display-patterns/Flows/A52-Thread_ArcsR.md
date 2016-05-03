@@ -41,10 +41,11 @@ Code example
 
     lab = rbind(c("Datsun 710 ",  mtcars$cyl[3]),c("Mazda RX4", mtcars$cyl[1]),c("Hornet",  mtcars$cyl[5]),
     c("Mazda RX4 ", mtcars$cyl[2]),c("Hornet 4 Drive",  mtcars$cyl[4]),  c("Valiant",  mtcars$cyl[6]), c("Duster 360",
-     mtcars$cyl[7]), c("Merc 240D",  mtcars$cyl[8]), c("Merc 230 ",  mtcars$cyl[9]), c("Merc 280 ",  mtcars$cyl[10]),
-    c("Merc 280C ",  mtcars$cyl[11]))
+     mtcars$cyl[7]), c("Merc 240D",  mtcars$cyl[8]), c("Merc 230 ",  mtcars$cyl[9]),
+     c("Merc 280 ",  mtcars$cyl[10]),
+     c("Merc 280C ",  mtcars$cyl[11]))
 
     # arc diagram
     arcplot(lab)
 
-![](A52-_Thread_Arcs_files/figure-markdown_strict/unnamed-chunk-2-1.png)<!-- -->
+![](A52-_Thread_Arcs_files/figure-markdown_strict/unnamed-chunk-2-1.png)
