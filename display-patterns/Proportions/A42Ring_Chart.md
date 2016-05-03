@@ -1,6 +1,6 @@
 
 
-#A 3.1: SIMPLE BAR CHART
+#A 4.2: RING CHART
 
 
 ## Description
