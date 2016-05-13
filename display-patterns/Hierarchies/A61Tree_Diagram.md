@@ -23,8 +23,7 @@ Identify the root member of the dataset. Draw the graphic object its represents,
 
 The tree is the commonly accepted way of displaying family-style structures; constructs of elements that stand in some kind of inheritance relationship to each other. Through the strict placement of different generations on different levels the user can easily identify causal relationships within the data structure.
 
-Especially in connection to computers, tree structures are a somewhat ubiquitous concept of organizing data; an operating system maintains files in a tree, the functions of many applications are arranged hierarchically, just as the content of complex editors. The majority of websites provides its content in a similar way, so that users of digital media are sort of anticipating information offered
-in a tree-like fashion: Choosing one of a few main branches in the beginning, the search becomes more detailed the deeper he drills down the tree (Behrens, 2008).
+Especially in connection to computers, tree structures are a somewhat ubiquitous concept of organizing data; an operating system maintains files in a tree, the functions of many applications are arranged hierarchically, just as the content of complex editors. The  majority of websites provides its content in a similar way, so that users of digital media are sort of anticipating information offered in a tree-like fashion: Choosing one of a few main branches in the beginning, the search becomes more detailed the deeper he drills down the tree (Behrens, 2008).
 
 
 # Related Patterns

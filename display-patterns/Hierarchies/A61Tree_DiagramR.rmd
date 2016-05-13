@@ -39,10 +39,10 @@ x<-subset(mtcars, mtcars$cyl==4)
 y<-subset(mtcars, mtcars$cyl==6)
 z<-subset(mtcars, mtcars$cyl==8)
 elpos<-coordinates (c(1,1,7))
-treearrow(from=elpos[1,],to=elpos[2,],lwd=6)  
-treearrow(from=elpos[2,],to=elpos[3:9,],lwd=6) 
+treearrow(from=elpos[1,],to=elpos[2,],lwd=4)  
+treearrow(from=elpos[2,],to=elpos[3:9,],lwd=4) 
 labs<-c("Car Distribution \n by Cylindres", "6 Cylindres",  row.names(y))
-for ( i in 1:length(labs)) textround (elpos[i,],radx=0.08,rady=0.05,lab=labs[i] , col = "blue", box.col="grey")
+for ( i in 1:length(labs)) textround (elpos[i,],radx=0.02,rady=0.05,lab=labs[i] ,cex=0.6, col = "blue", box.col="grey")
 
 ```
 The complete online documentation is also available in the form of a single [PDF](https://cran.r-project.org/web/packages/diagram/diagram.pdf) file at CRAN.
