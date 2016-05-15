@@ -48,7 +48,7 @@ Code Example
     treearrow(from=elpos[1,],to=elpos[2,],lwd=4)  
     treearrow(from=elpos[2,],to=elpos[3:9,],lwd=4) 
     labs<-c("Car Distribution \n by Cylindres", "6 Cylindres",  row.names(y))
-    for ( i in 1:length(labs)) textround (elpos[i,],radx=0.02,rady=0.05,lab=labs[i] ,cex=0.6, col = "blue", box.col="grey")
+    for ( i in 1:length(labs)) textrect(elpos[i,],radx=0.06,rady=0.05,lab=labs[i] ,cex=0.6, col = "blue", box.col="grey")
 
 ![](A61Tree_DiagramR_files/figure-markdown_strict/unnamed-chunk-2-1.png)<!-- -->
 The complete online documentation is also available in the form of a
