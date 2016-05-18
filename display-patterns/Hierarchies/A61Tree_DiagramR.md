@@ -2,8 +2,10 @@ R IMPLEMENTATION
 ================
 
 For implementation of pattern Tree Diagram in R, it use the package
-"diagram". This package include functions for visualising simple graphs
-(networks), plotting flow diagrams.
+"diagram". This package include functions for visualises simple graphs
+(networks) based on a transition matrix, utilities to plot flow
+diagrams, visualising webs, electrical networks, ... (Soetaert,
+2014)[1].
 
 Data Set
 --------
@@ -60,3 +62,6 @@ From within R, type: &gt; help(diagram)
 
 References
 ----------
+
+[1] Soetaert, Karline (2014). CRAN. Consultado el 12 de Mayo, 2016 en
+<https://cran.r-project.org/web/packages/diagram/index.html>
