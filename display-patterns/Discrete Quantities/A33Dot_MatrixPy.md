@@ -12,7 +12,6 @@ d.head()
 
 
 
-
 ## Dependences
 
 * Matplotlib
@@ -28,25 +27,54 @@ d.head()
 
 
 ~~~~{.python}
+import matplotlib.patches as p
 import matplotlib.pyplot as plt
-import numpy as np
+import pandas
+import math
+from datos import data
 
-#here's our data to plot, all normal Python lists
-x = [1, 2, 3, 4, 5]
-y = [0.1, 0.2, 0.3, 0.4, 0.5]
-x, y = np.meshgrid(x, y)
-fig, ax = plt.subplots(figsize=(2, 2))
-#plt.ylim(ymax=0.6)
-#plt.xlim(xmax=6)
-ax.margins(0.1)
-#ax.set_axis_off()
-ax.set_xticklabels(" ")
-ax.set_yticklabels(" ")
-ax.plot(x, y, 'o', markersize=20)
+fig=plt.figure(1, figsize=(4,4))
+ax = plt.subplot(111, aspect='equal')
+colors=['#FF9999', 'lightskyblue','#66FF66' ]
+d=data('mtcars')
+ps = pandas.Series([i for i in d.gear])
+counts = ps.value_counts()
+
+x=0.05
+y=0.9
+m=0
+cols=1
+for i in counts:
+        for j in range(i):
+                p1 = p.Circle((x, y), 0.05, fc=colors[m],
+edgecolor='white')
+                x=x+0.1
+                ax.add_patch(p1)
+                cols=cols+1
+                if (cols>10):
+                        cols=1
+                        x=0.05
+                        y=y-0.1
+        m=m+1
+x=0.05
+y=0.3
+m=0
+for i in counts.index:
+        p2 = p.Circle((x, y), 0.05, fc=colors[m], edgecolor='white')
+        ax.add_patch(p2)
+        plt.text(x+0.17, y-0.03, str(int(i))+" gear", ha="center",
+family='sans-serif', size=11, color='b' )
+        #y=y-0.13
+        x=x+0.35
+        m=m+1
+
+ax.axis('off')
+plt.title("Dot Matrix by Number of Gears", color='b', family='sans-
+serif', size=14)
 plt.show()
 ~~~~~~~~~~~~~
 
-![](figures/A33Dot_MatrixPy_figure2_1.png){width=12 cm}\
+![](figures/A33Dot_MatrixPy_figure2_1.png)
 
 
 
@@ -54,21 +82,56 @@ plt.show()
 
 
 ~~~~{.python}
-import seaborn as sns
-import numpy as np
+import matplotlib.patches as p
 import matplotlib.pyplot as plt
+import pandas
+import seaborn as sns
+from datos import data
 
-x = [1, 2, 3, 4, 5]
-y = [0.1, 0.2, 0.3, 0.4, 0.5]
-plt.figure(figsize=(2,2))
-x, y = np.meshgrid(x, y)
-for i in x:
-        for j in y:
-                sns.swarmplot(x=i,y=j, size=18,palette="Set2")
+sns.set(style="white")
+#colors=sns.color_palette("muted", n_colors=9)
+colors = sns.husl_palette(10)
+
+fig=plt.figure(1, figsize=(4,4))
+ax = plt.subplot(111, aspect='equal')
+d=data('mtcars')
+ps = pandas.Series([i for i in d.gear])
+counts = ps.value_counts()
+
+x=0.05
+y=0.9
+m=0
+cols=1
+for i in counts:
+        for j in range(i):
+                p1 = p.Circle((x, y), 0.05, fc=colors[m],
+edgecolor='white')
+                x=x+0.1
+                ax.add_patch(p1)
+                cols=cols+1
+                if (cols>10):
+                        cols=1
+                        x=0.05
+                        y=y-0.1
+        m=m+4
+x=0.05
+y=0.3
+m=0
+for i in counts.index:
+        p2 = p.Circle((x, y), 0.05, fc=colors[m], edgecolor='white')
+        ax.add_patch(p2)
+        plt.text(x+0.17, y-0.03, str(int(i))+" gear", ha="center",
+family='sans-serif', size=11, color='b' )
+        x=x+0.35
+        m=m+4
+
+ax.axis('off')
+plt.title("Dot Matrix by Number of Gears", color='b', family='sans-
+serif', size=14)
 plt.show()
 ~~~~~~~~~~~~~
 
-![](figures/A33Dot_MatrixPy_figure3_1.png){width=12 cm}\
+![](figures/A33Dot_MatrixPy_figure3_1.png)
 
 
 
@@ -77,19 +140,57 @@ plt.show()
 
 ~~~~{.python}
 import pyqtgraph as pg
-from pyqtgraph.Qt import QtCore, QtGui
+from  PyQt4  import  QtGui
+import pandas
+from datos import data
 
-plotWidget = pg.plot(title="Three plot curves")
-plotWidget.resize(800,800)
-s3 = pg.ScatterPlotItem(pxMode=False)   ## Set pxMode=False to allow
-spots to transform with the view
-spots3 = []
-for i in range(10):
-    for j in range(10):
-        spots3.append({'pos': (1e-6*i, 1e-6*j), 'size': 1e-6, 'pen':
-{'color': 'w', 'width': 2}, 'brush':pg.intColor(i*10+j, 100)})
-s3.addPoints(spots3)
-plotWidget.addItem(s3)
+win = pg.GraphicsWindow("Dot Matrix ")
+win.resize(300,300)
+v = win.addViewBox()
+v.setAspectLocked()
+text = pg.TextItem("Dot Matrix by Number of Gears ",
+anchor=(-0.1,22.5), color='w')
+v.addItem(text)
+d=data('mtcars')
+ps = pandas.Series([i for i in d.gear])
+counts = ps.value_counts()
+position=[ (-0.5,15), (-2,15), (-3.5,15)]
+colours = [QtGui.QColor('springgreen'), QtGui.QColor('lightskyblue'),
+QtGui.QColor('lightcoral')]
+
+x=0.0
+y=1.0
+m=0
+cols=1
+
+for i in counts:
+        for j in range(i):
+                ellipse = QtGui.QGraphicsEllipseItem(x,y,0.05,0.05)
+                ellipse.setBrush(colours[m])
+                v.addItem(ellipse)
+                x=x+0.05
+                cols=cols+1
+                if (cols>10):
+                        cols=1
+                        x=0.0
+                        y=y-0.05
+        m=m+1
+
+x=0
+y=0.7
+m=0
+for i in counts.index:
+        ellipse = QtGui.QGraphicsEllipseItem(x,y,0.05,0.05)
+        ellipse.setBrush(colours[m])
+        v.addItem(ellipse)
+        x=x+0.15
+        m=m+1
+j=0
+for x in counts.index:
+    text = pg.TextItem(str(int(x))+" gear", anchor=(position[j]),
+color='w')
+    v.addItem(text)
+    j+=1
 
 if __name__ == '__main__':
     import sys
@@ -98,7 +199,7 @@ if __name__ == '__main__':
         QtGui.QApplication.instance().exec_()
 ~~~~~~~~~~~~~
 
-
+![](figures/A33Dot_MatrixPy_figure4_1.png)
 
 
 ### References

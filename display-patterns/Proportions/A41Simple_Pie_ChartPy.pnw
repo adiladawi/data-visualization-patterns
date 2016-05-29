@@ -63,10 +63,9 @@ plt.show()
 
 <<fig = True, width = '12 cm', echo = True>>=
 import pyqtgraph as pg
-import random
-import numpy
 from  PyQt4  import  QtGui
 from datos import data
+import numpy
 
 win = pg.GraphicsWindow("Car Distribution by Cylindres")
 view = win.addViewBox()
@@ -85,7 +84,7 @@ labels=['','','']
 labels[0]='4 Cyl \n'+str(r[0]*100)+ '%'
 labels[1]='6 Cyl \n'+str(r[1]*100) + '%'
 labels[2]='8 Cyl \n'+str(r[2]*100) +'%'
-position=[ (-1,6), (-5,4), (-5,10)
+position=[ (-1,6), (-5,4), (-5,10)]
 set_angle = 0
 
 for x in r:     
@@ -109,7 +108,7 @@ for x in position:
 if __name__ == '__main__':
     import sys
     if (sys.flags.interactive != 1) or not hasattr(QtCore, 'PYQT_VERSION'):
-        QtGui.QApplication.instance().exec
+        QtGui.QApplication.instance().exec_()
 @
 
 
