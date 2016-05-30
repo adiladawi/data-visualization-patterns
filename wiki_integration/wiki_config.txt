@@ -1,0 +1,12 @@
+main_page
+a.txt
+py_page
+b.txt
+r_page
+c.txt
+new_page
+d.txt
+source_path
+./
+dest_path
+./
