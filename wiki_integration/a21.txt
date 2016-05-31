@@ -1,11 +1,11 @@
 main_page
-A23-Stacked Area Chart.md
+A21-Simple Line Chart.md
 py_page
-A23-Stacked_Area_ChartPy.md
+A21Simple_Line_ChartsPy.md
 r_page
-A23-Stacked_Area_ChartR.md
+A21Simple_Line_ChartsR.md
 new_page
-A23 Stacked Area Chart.md
+A21 Simple Line Chart.md
 source_path
 /Users/jams/Code/data-visualization-patterns/display-patterns/Continuous Quantities/
 dest_path

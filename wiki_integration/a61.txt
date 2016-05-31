@@ -1,0 +1,12 @@
+main_page
+A61Tree_Diagram.md
+py_page
+A61Tree_DiagramPy.md
+r_page
+A61Tree_DiagramR.md
+new_page
+A61 Tree Diagram.md
+source_path
+/Users/jams/Code/data-visualization-patterns/display-patterns/Hierarchies/
+dest_path
+/Users/jams/Code/data-visualization-patterns.wiki/
