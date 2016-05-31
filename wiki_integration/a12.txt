@@ -1,0 +1,12 @@
+main_page
+A12Bubble_Chart.md
+py_page
+A12Bubble_ChartPy.md
+r_page
+A12Bubble_ChartR.md
+new_page
+A12 Bubble Chart.md
+source_path
+/Users/jams/Code/data-visualization-patterns/display-patterns/correlations/
+dest_path
+/Users/jams/Code/data-visualization-patterns.wiki/

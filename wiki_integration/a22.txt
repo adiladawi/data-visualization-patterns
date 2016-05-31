@@ -1,11 +1,11 @@
 main_page
-A21-Simple Line Chart.md
+A22-Multiset Line Chart.md
 py_page
-A21Simple_Line_ChartsPy.md
+A22Multiset_Line_ChartpPy.md
 r_page
-A21Simple_Line_ChartsR.md
+A22-Multiset_Line_ChartR.md
 new_page
-A21 Simple Line Chart.md
+A22 Multiset Line Chart.md
 source_path
 /Users/jams/Code/data-visualization-patterns/display-patterns/Continuous Quantities/
 dest_path

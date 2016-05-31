@@ -1,0 +1,12 @@
+main_page
+A36Span_Chart.md
+py_page
+A36Span_ChartPy.md
+r_page
+A36Span_ChartR.md
+new_page
+A36 Span Chart.md
+source_path
+/Users/jams/Code/data-visualization-patterns/display-patterns/Discrete Quantities/
+dest_path
+/Users/jams/Code/data-visualization-patterns.wiki/

@@ -1,0 +1,12 @@
+main_page
+A34Stacked_Bar_Chart.md
+py_page
+A34Stacked_Bar_ChartPy.md
+r_page
+A34Stacked_Bar_ChartR.md
+new_page
+A34 Stacked Bar Chart.md
+source_path
+/Users/jams/Code/data-visualization-patterns/display-patterns/Discrete Quantities/
+dest_path
+/Users/jams/Code/data-visualization-patterns.wiki/

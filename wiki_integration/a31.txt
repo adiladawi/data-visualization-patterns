@@ -1,0 +1,12 @@
+main_page
+A31Simple_Bar_Chart.md
+py_page
+A31Simple_Bar_ChartPy.md
+r_page
+A31Simple_Bar_ChartR.md
+new_page
+A31 Simple Bar Chart.md
+source_path
+/Users/jams/Code/data-visualization-patterns/display-patterns/Discrete Quantities/
+dest_path
+/Users/jams/Code/data-visualization-patterns.wiki/

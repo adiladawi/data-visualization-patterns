@@ -1,0 +1,12 @@
+main_page
+A41Simple_Pie_Chart.md
+py_page
+A41Simple_Pie_ChartPy.md
+r_page
+A41Simple_Pie_ChartR.md
+new_page
+A41 Simple Pie Chart.md
+source_path
+/Users/jams/Code/data-visualization-patterns/display-patterns/Proportions/
+dest_path
+/Users/jams/Code/data-visualization-patterns.wiki/

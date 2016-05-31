@@ -1,0 +1,12 @@
+main_page
+A11Scatterplot.md
+py_page
+A11ScatterplotPy.md
+r_page
+A11ScatterplotR.md
+new_page
+A11 Scatterplot.md
+source_path
+/Users/jams/Code/data-visualization-patterns/display-patterns/correlations/
+dest_path
+/Users/jams/Code/data-visualization-patterns.wiki/
