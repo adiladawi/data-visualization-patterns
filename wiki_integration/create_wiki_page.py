@@ -13,8 +13,8 @@ def create_wiki_page(config_file):
 
     wiki_page = open(files['dest_path'] + files['new_page'], 'w')
     wiki_page.write(main_page)
-    wiki_page.write(py_page)
-    wiki_page.write(r_page)
+    wiki_page.write("\n" + py_page)
+    wiki_page.write("\n" + r_page)
 
     wiki_page.close()
     print "Wiki page '%s' successfully created." % (files['new_page'])
