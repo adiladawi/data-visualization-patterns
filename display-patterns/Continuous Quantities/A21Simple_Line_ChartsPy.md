@@ -1,6 +1,6 @@
 # Python Implementation Pattern
 
-implementacion del patron en Python
+Simple line Chart is type of graph showing a line ascending and / or descending, line chart regularly shows the tendency of a data set against other data (regularly) against a time interval.
 
 ## Data Set
 
@@ -33,7 +33,7 @@ plt.grid(True)
 plt.show()
 ~~~~~~~~~~~~~
 
-![](figures/A21Simple_Line_Charts_figure1_1.png)\
+![](figures/A21Simple_Line_Charts_figure1_1.png)
 
 
 ### Code Example With Seaborn
@@ -55,7 +55,7 @@ plt.title('Motor Trend Car Road Tests')
 plt.show()
 ~~~~~~~~~~~~~
 
-![](figures/A21Simple_Line_Charts_figure2_1.png)\
+![](figures/A21Simple_Line_Charts_figure2_1.png)
 
 
 ### Code Example With PyQtGraph 
@@ -86,4 +86,4 @@ if __name__ == '__main__':
         QtGui.QApplication.instance().exec_()
 ~~~~~~~~~~~~~
 
-
+![](figures/A21Simple_Line_Charts_figure3_1.png)
