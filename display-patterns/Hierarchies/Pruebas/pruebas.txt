@@ -1,0 +1,12 @@
+https://github.com/AlDanial/cloc v 1.66  T=0.03 s (150.2 files/s, 4474.6 lines/s)
+----------------------------------------------------------------------------------------
+File                                                 blank        comment           code
+----------------------------------------------------------------------------------------
+Pruebas/A61Tree_Diagram_Matplotlib.py                    2              0             50
+Pruebas/A62Tree_Map_Matplotlib.py                        9              1             50
+Pruebas/A61Tree_Diagram_Graphviz.py                      2              0             19
+Pruebas/A61Tree_Diagram_Diagram.R                        0              0             12
+Pruebas/A62Tree_Map_Treemap.R                            0              0              4
+----------------------------------------------------------------------------------------
+SUM:                                                    13              1            135
+----------------------------------------------------------------------------------------

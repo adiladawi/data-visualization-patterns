@@ -1,7 +1,7 @@
 import os
 import re
 
-path = '/home/juannis/data-visualization-patterns/display-patterns/Discrete Quantities/Pruebas'
+path = '/home/juannis/data-visualization-patterns/display-patterns/Proportions/Pruebas'
 lstFiles = []
 lstFilesR = []
 lstDir = os.walk(path)   #os.walk()Lista directorios y ficheros
@@ -32,11 +32,11 @@ for file in lstFilesR:
 	archivo.close()
 
 archivo = open("pruebas.md", "w")
-archivo.write('| {:30}'.format('File')+' |{:>15}'.format('Library')+" | \n")
-archivo.write( '|--------------------------------|----------------|'+'\n')
+archivo.write('| {:36}'.format('File')+' |{:>15}'.format('Library')+" | \n")
+archivo.write( '|--------------------------------------|----------------|'+'\n')
 for l in lib:	
-	archivo.write('| {:30}'.format(l)+' |{:>15}'.format(lib[l])+" | \n")
-	print '{:30}'.format(l)+'{:>10}'.format(lib[l])	
+	archivo.write('| {:36}'.format(l)+' |{:>15}'.format(lib[l])+" | \n")
+	print '{:36}'.format(l)+'{:>10}'.format(lib[l])	
 archivo.close()
 
 

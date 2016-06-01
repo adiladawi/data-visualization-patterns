@@ -1,27 +1,12 @@
-# PYTHON IMPLEMENTATION 
-
-
-## Data Set
-
-<<fig = False,  width = '12 cm', echo = True>>=
-from datos import data
-d=data('mtcars')
-@
-
-
-## Dependences
-
-* Matplotlib
-* Seaborn
-* Pandas
-
-
-## Code Example
-
-
-### Matplotlib
-
-<<fig = True, width = '12 cm', echo = True>>=
+library(ggplot2)
+t<-table(mtcars$cyl)
+x<-as.data.frame(t)
+colnames(x)<-c("Cylindres", "Frequency")
+bp <- ggplot(x, aes(x ="",y=Frequency, fill = Cylindres)) +
+  geom_bar(width = 1,  stat = "identity") +labs (title="Proportion Cylindres in a Car Distribution")
+pie <-bp+coord_polar("y", start=0)
+pie +   geom_text(aes(y = Frequency/3 + c(0, cumsum(Frequency)[-length(Frequency)]), 
+                      label = paste(round(Frequency/sum(Frequency) * 100), " %")), size=5)
 import matplotlib.pyplot as plt
 from datos import data
 import pandas 
@@ -58,7 +43,3 @@ ax.annotate('6 Cylindres', (0, 0), xytext=(np.radians(-20), 0.9), bbox=dict(boxs
             textcoords='polar', ha='right', **kwargs)
 plt.title("Gear Car's Distribution by Cylindres", size=18)
 plt.show()
-@
-
-
-### References

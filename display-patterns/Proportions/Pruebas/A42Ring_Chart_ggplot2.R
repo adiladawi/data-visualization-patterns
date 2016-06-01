@@ -1,29 +1,3 @@
----
-output: md_document
----
-
-# R IMPLEMENTATION
-
-
-## Data Set
-
-```{r}
-table(mtcars$cyl)
-
-```
-
-
-## Dependences
-
-* ggplot2
-
-
-## Code Example
-
-
-### ggplot2
-
-```{r}
 library(ggplot2)
 t<-table(mtcars$cyl, mtcars$gear)
 x<-as.data.frame(t)
@@ -32,7 +6,3 @@ bp <- ggplot(x, aes(x =Cylindres,y=Frequency, fill = Gear)) +
   geom_bar(width = 0.9,  stat = "identity", position="fill") +labs (title="Gear Car's Distribution by Cylindres")
 pie <-bp+coord_polar("y", start=0)
 pie
-```
-
-
-## References

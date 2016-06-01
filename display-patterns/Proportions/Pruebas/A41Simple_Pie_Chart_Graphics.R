@@ -1,0 +1,6 @@
+t<-table(mtcars$cyl)
+colores<-c("pink","green","skyblue")
+pct <- round(t/sum(t) * 100)
+lbl<-paste(c("4 Cyl","6 Cyl","8 Cyl"), pct, sep =" ")
+lbl<-paste(lbl, "%", sep =" ")
+pie(x=t,labels=lbl, col = colores, radius = 1, main="Proportion Cylindres in a Car Distribution", cex=1)

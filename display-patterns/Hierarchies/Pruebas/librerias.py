@@ -1,7 +1,7 @@
 import os
 import re
 
-path = '/home/juannis/data-visualization-patterns/display-patterns/Discrete Quantities/Pruebas'
+path = '/home/juannis/data-visualization-patterns/display-patterns/Hierarchies/Pruebas'
 lstFiles = []
 lstFilesR = []
 lstDir = os.walk(path)   #os.walk()Lista directorios y ficheros
@@ -14,6 +14,7 @@ for root, dirs, files in lstDir:
             lstFiles.append(nombreFichero+extension) 
         if(extension == ".R") or (extension == ".r"):
             lstFilesR.append(nombreFichero+extension)         
+
 
 for file in lstFiles:
 	archivo = open(file, "r") 
