@@ -79,7 +79,6 @@ import seaborn as sns
 from datos import data
 
 sns.set(style="white")
-#colors=sns.color_palette("muted", n_colors=9)
 colors = sns.husl_palette(10)
 
 fig=plt.figure(1, figsize=(4,4))

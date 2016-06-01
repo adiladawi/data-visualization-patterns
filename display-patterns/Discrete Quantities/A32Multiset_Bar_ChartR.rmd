@@ -27,8 +27,8 @@ counts
 ```{r}
 counts <- table(mtcars$cyl, mtcars$gear)
 barplot(counts, main="Car Distribution by Gears and Cyl",
-  xlab="Number of Gears", ylab="Frequency", col=c("darkblue","red"),
- 	legend = rownames(counts), beside=TRUE)
+	xlab="Number of Gears", ylab="Frequency", col=c("darkblue","red"),
+	legend = rownames(counts), beside=TRUE)
 
 ```
 
@@ -38,8 +38,8 @@ barplot(counts, main="Car Distribution by Gears and Cyl",
 ```{r}
 library("lattice")
 counts <- table(mtcars$gear, mtcars$cyl)
-barchart(counts, stack = FALSE, horizontal="false", main="Car Distribution by Gears and Cyl",     xlab="Number of Gears", ylab="Frequency",
-         auto.key = list(space="top", columns=3, title="Cyl", cex.title=1))
+barchart(counts, stack = FALSE, horizontal="false", main="Car Distribution by Gears 	and Cyl",     xlab="Number of Gears", ylab="Frequency",
+	auto.key = list(space="top", columns=3, title="Cyl", cex.title=1))
 
 ```
 

@@ -1,0 +1,19 @@
+https://github.com/AlDanial/cloc v 1.66  T=0.16 s (76.8 files/s, 691.3 lines/s)
+----------------------------------------------------------------------------------------
+File                                                 blank        comment           code
+----------------------------------------------------------------------------------------
+Pruebas/A11Scaterplot_Pyqtgraph.py                       2              0             17
+Pruebas/A12Bubble_Chart_Pyqtgraph.py                     2              0             16
+Pruebas/A12Bubble_Chart_Seaborn.py                       1              0             12
+Pruebas/A11Scaterplot_Seaborn.py                         1              0             10
+Pruebas/A12Bubble_Chart_Lattice.R                        0              0             10
+Pruebas/A12Bubble_Chart_Matplotlib.py                    1              0             10
+Pruebas/A11Scaterplot_Matplotlib.py                      1              0              9
+Pruebas/A11Scaterplot_Lattice.R                          0              0              4
+Pruebas/A11Scaterplot_ggplot2.r                          0              0              3
+Pruebas/A12Bubble_Chart_Graphics.R                       0              0              3
+Pruebas/A11Scaterplot_Graphics.R                         0              0              3
+Pruebas/A12Bubble_Chart_ggplot2.R                        0              0              3
+----------------------------------------------------------------------------------------
+SUM:                                                     8              0            100
+----------------------------------------------------------------------------------------
