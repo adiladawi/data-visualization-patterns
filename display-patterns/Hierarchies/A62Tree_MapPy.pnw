@@ -7,7 +7,7 @@ For this proyect it will use the dataset mtcars of R.
 
 The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models)
 
-<<fig = False,  width = '12 cm', echo = True>>=
+<<fig = False,  echo = True>>=
 from datos import data
 d=data('mtcars')
 @
@@ -24,7 +24,7 @@ d=data('mtcars')
 
 ### Matplotlib
 
-<<fig = True, width = '12 cm', echo = True>>=
+<<fig = True, echo = True>>=
 import pylab
 import random
 import matplotlib.pyplot as plt
@@ -89,7 +89,6 @@ if __name__ == '__main__':
 @
 
 The complete online documentation is also available at [matplotlib](http://matplotlib.org/contents.html)
-
 
 
 ### References

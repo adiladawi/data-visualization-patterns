@@ -9,9 +9,7 @@ For implementation of pattern Tree Diagram in R, it use the package "diagram".  
 
 ## Data Set
 
-For this proyect it will use the dataset mtcars.
-
-The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models).
+For this proyect it was use the dataset mtcars. This data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models).
 
 ```{r}
 head(mtcars)

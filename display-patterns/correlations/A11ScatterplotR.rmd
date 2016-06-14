@@ -7,11 +7,10 @@ output: md_document
 R is a language and environment for statistical computing and graphics. It is a GNU project which is similar to the S language and environment which was developed at Bell Laboratories (formerly AT&T, now Lucent Technologies) by John Chambers and colleagues. 
 R provides a wide variety of statistical (linear and nonlinear modelling, classical statistical tests, time-series analysis, classification, clustering, …) and graphical techniques, and is highly extensible (The R Fundation, 2016)[^1]. 
 
+
 ## Data Set
 
-For this proyect it will use the dataset mtcars.
-
-The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models).
+For this proyect it was use the dataset mtcars. This data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models).
 
 ```{r}
 head(mtcars)
@@ -21,18 +20,14 @@ head(mtcars)
 
 ## Dependences  
 
-* Lattice
-* ggplot2
+* **Graphics**. This package contains functions for **base graphics**. Base graphics are traditional S-like graphics, as opposed to the more recent grid graphics(R Core Team,s.f. )[^2]. 
+* **Lattice**. Is an implementation of Trellis graphics for R. It is a powerful and elegant high-level data visualization system with an emphasis on multivariate data. It is designed to meet most typical graphics needs with minimal tuning, but can also be easily extended to handle most nonstandard requirements (Sarkar, 2011)[^3]
+* **ggplot2**.  Is a plotting system for R, based on the grammar of graphics, which tries to take the good parts of base and lattice graphics and none of the bad parts. It takes care of many of the fiddly details that make plotting a hassle (like drawing legends) as well as providing a powerful model of graphics that makes it easy to produce complex multi-layered graphics(Wickham, 2013)[^4].
 
 
 ## Code Example
 
 ### Graphics
-This package contains functions for ‘base’ graphics. Base graphics are traditional S-like graphics, as opposed to the more recent grid graphics.
-
-For a complete list of functions with individual help pages, use library (help = "graphics")(R Core Team,s.f. )[^2]. 
-
-The online documentation is also available at [docs.Graphics](https://stat.ethz.ch/R-manual/R-devel/library/graphics/html/00Index.html)
 
 Plot is generic function for plotting of R objects and draw a scatter plot with decorations such as axes and titles in the active graphics window.
 
@@ -43,15 +38,14 @@ plot(mtcars$wt, mtcars$mpg,
 
 ```
 
+For a complete list of functions with individual help pages, use library (help = "graphics")(R Core Team,s.f. )[^2]. 
+
+The online documentation is also available at [docs.Graphics](https://stat.ethz.ch/R-manual/R-devel/library/graphics/html/00Index.html)
+
+
 ### Lattice
-The lattice add-on package is an implementation of Trellis graphics for R. It is a powerful and elegant high-level data visualization system with an emphasis on multivariate data. It is designed to meet most typical graphics needs with minimal tuning, but can also be easily extended to handle most nonstandard requirements(Sarkar, 2011)[^3].
 
-
-The complete online documentation is also available in the form of a single [PDF](https://cran.r-project.org/web/packages/lattice/lattice.pdf) file at CRAN. 
-From within R, type
-> help(Lattice) 
-
-Lattice functions. xyplot produces bivariate scatterplots.
+Lattice function xyplot produces bivariate scatterplots.
 
 ```{r}
 library(lattice)
@@ -60,10 +54,13 @@ xyplot(mtcars$mpg~mtcars$wt,
     xlab="Car Weight", ylab="Miles per Gallon", pch=19)
 
 ```
- 
+
+The complete online documentation is also available in the form of a single [PDF](https://cran.r-project.org/web/packages/lattice/lattice.pdf) file at CRAN. 
+From within R, type:
+> help(Lattice)
+
 
 ### ggplot2
-ggplot2 is a plotting system for R, based on the grammar of graphics, which tries to take the good parts of base and lattice graphics and none of the bad parts. It takes care of many of the fiddly details that make plotting a hassle (like drawing legends) as well as providing a powerful model of graphics that makes it easy to produce complex multi-layered graphics(Wickham, 2013)[^4]. ggplot2 documentation is available at [docs.ggplot2.org](http://docs.ggplot2.org/current/)
 
 The point geom is used to create scatterplots in ggplot2.
 
@@ -73,6 +70,8 @@ g <- ggplot(mtcars, aes(wt, mpg))+geom_point(colour="blue")
 g + labs(list(title = "Scatterplots by Milles per Gallon and  Car Weight",  x="Car Weight", y="Miles per Gallon"))
 
 ```
+
+The ggplot2 documentation is available at [docs.ggplot2.org](http://docs.ggplot2.org/current/)
 
 
 ## References
