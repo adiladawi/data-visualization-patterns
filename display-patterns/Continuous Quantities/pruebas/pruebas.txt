@@ -1,0 +1,23 @@
+http://cloc.sourceforge.net v 1.64  T=0.12 s (133.3 files/s, 1499.4 lines/s)
+---------------------------------------------------------------------------------------------------
+File                                                            blank        comment           code
+---------------------------------------------------------------------------------------------------
+pruebas/A21Simple_Line_Charts_files_PyqtGraph.py                    4              0             17
+pruebas/A23Stacked_Area_Char_Seaborn.py                             5              0             15
+pruebas/A22Multiset_Line_Chart_PyqtGraph.py                         4              0             15
+pruebas/A23Stacked_Area_Char_Matplotlib.py                          3              0             14
+pruebas/A21Simple_Line_Charts_files_Matplot.py                      1              0             12
+pruebas/A21Simple_Line_Charts_files_Seaborn.py                      1              0             12
+pruebas/A22Multiset_Line_Chart_Seaborn.py                           2              0             10
+pruebas/A22Multiset_Line_Chart_filesMatplolib.py                    4              0              9
+pruebas/A21Simple_Line_Charts_Lattice.R                             0              0              8
+pruebas/A23Stacked_Area_Chart_Ggplot2.R                             1              0              7
+pruebas/A22Multiset_Line_Chart_Lattice.R                            2              2              7
+pruebas/A22Multiset_Line_Chart_Graphics.R                           3              0              5
+pruebas/A21Simple_Line_Charts_Ggplot2.R                             0              0              5
+pruebas/A22Multiset_Line_ChartGgplot2.R                             1              0              5
+pruebas/A23Stacked_Area_Chart_Graphics.R                            0              0              3
+pruebas/A21Simple_Line_Charts_Graphics.R                            0              0              3
+---------------------------------------------------------------------------------------------------
+SUM:                                                               31              2            147
+---------------------------------------------------------------------------------------------------

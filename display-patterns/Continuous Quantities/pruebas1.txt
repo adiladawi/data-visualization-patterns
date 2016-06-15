@@ -1,0 +1,1 @@
+cloc --by-file --report-file=pruebas.txt
