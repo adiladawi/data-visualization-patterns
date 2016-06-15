@@ -18,7 +18,7 @@ class pruebas:
 
 if __name__ == '__main__':
 
-	path = '/home/juannis/data-visualization-patterns/display-patterns/Continuous Quantities/pruebas'
+	path = '/home/juannis/data-visualization-patterns/display-patterns/Flows/Pruebas'
 	lstDir = os.walk(path)   #os.walk()Lista directorios y ficheros
 	lstFiles = []
 	lstFilesR = []

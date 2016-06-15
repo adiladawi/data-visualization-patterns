@@ -70,7 +70,7 @@ g.set_axis_labels("Car Weight","Milles per Gallon")
 plt.show()
 @
 
-The online documentation is available in [Seaborn](https://stanford.edu/~mwaskom/software/seaborn/api.html)
+The online documentation is available in [Seaborn](https://stanford.edu/~mwaskom/software/seaborn/api.html).
 
 
 ### Pyqtgraph
@@ -99,6 +99,7 @@ if __name__ == '__main__':
 @
 
 The complete online documentation is also available at [Pyqtrgaph](http://www.pyqtgraph.org/documentation/).
+
 
 ## References
 
