@@ -52,8 +52,9 @@ Code Example
 ### Graphics
 
 This example use the symbols function to make a Bubble Chart. For get
-help of the function, at the program's command prompt type: &gt;
-help("Symbols")
+help of the function, at the program's command prompt type:
+
+> help("Symbols")
 
     radius <- sqrt( mtcars$cyl/ pi )
     symbols(mtcars$wt,mtcars$mpg, circles=radius,inches=0.17, fg="blue", bg="blue", xlab="Car Weight", ylab="Miles per Gallon", main="Bubble Chart by Milles per Gallon and  Car Weight")
@@ -86,7 +87,9 @@ Lattice function xyplot produces Bubble Charts.
 The complete online documentation is also available in the form of a
 single
 [PDF](https://cran.r-project.org/web/packages/lattice/lattice.pdf) file
-at CRAN. From within R, type: &gt; help(Lattice)
+at CRAN. From within R, type:
+
+> help(Lattice)
 
 ### ggplot2
 

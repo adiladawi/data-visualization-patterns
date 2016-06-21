@@ -57,6 +57,7 @@ xyplot(mtcars$mpg~mtcars$wt,
 
 The complete online documentation is also available in the form of a single [PDF](https://cran.r-project.org/web/packages/lattice/lattice.pdf) file at CRAN. 
 From within R, type:
+
 > help(Lattice)
 
 

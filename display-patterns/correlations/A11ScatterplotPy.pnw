@@ -36,7 +36,7 @@ d=data('mtcars')
 
 The scatter function is used to make a scatter plot of x vs y, where x and y are sequence like objects of the same lengths. The documentation for this function is available in [Scatter plot](http://matplotlib.org/api/pyplot_api.html?highlight=scatter#matplotlib.pyplot.scatter)
 
-<<fig = True, width = '12 cm', echo = True>>=
+<<fig = True,  echo = True>>=
 import numpy as np
 import matplotlib.pyplot as plt
 from datos import data

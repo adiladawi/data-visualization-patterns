@@ -35,7 +35,7 @@ d=data('mtcars')
 
 ### Matplotlib
 
-<<fig = True, width = '12 cm', echo = True>>=
+<<fig = True, echo = True>>=
 import matplotlib.pyplot as plt
 from datos import data
 import pandas
@@ -56,7 +56,7 @@ The complete online documentation is also available at [matplotlib](http://matpl
 
 ### Seaborn
 
-<<fig = True, width = '12 cm', echo = True>>=
+<<fig = True, echo = True>>=
 import seaborn as sns
 import matplotlib.pyplot as plt
 from datos import data
@@ -81,7 +81,7 @@ The online documentation is available in [Seaborn](https://stanford.edu/~mwaskom
 
 ### Pyqtgraph
 
-<<fig = True, width = '12 cm', echo = True>>=
+<<fig = True, echo = True>>=
 import pyqtgraph as pg
 from pyqtgraph.Qt import QtCore, QtGui
 from datos import data

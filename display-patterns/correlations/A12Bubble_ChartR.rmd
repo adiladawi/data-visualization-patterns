@@ -28,6 +28,7 @@ head(mtcars)
 ### Graphics
 
 This example use the symbols function to make a Bubble Chart. For get help of the function, at the program's command prompt type: 
+
 > help("Symbols")
 
 ```{r}
@@ -59,6 +60,7 @@ xyplot(mtcars$mpg~mtcars$wt, aspect = 2/3,
 
 The complete online documentation is also available in the form of a single [PDF](https://cran.r-project.org/web/packages/lattice/lattice.pdf) file at CRAN. 
 From within R, type:
+
 > help(Lattice)
 
 
