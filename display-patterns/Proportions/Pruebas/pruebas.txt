@@ -1,8 +1,8 @@
-https://github.com/AlDanial/cloc v 1.66  T=0.04 s (184.5 files/s, 4175.1 lines/s)
+https://github.com/AlDanial/cloc v 1.66  T=0.11 s (70.9 files/s, 1622.7 lines/s)
 --------------------------------------------------------------------------------------------
 File                                                     blank        comment           code
 --------------------------------------------------------------------------------------------
-Pruebas/A41Simple_Pie_Chart_Pyqtgraph.py                     4              0             43
+Pruebas/A41Simple_Pie_Chart_Pyqtgraph.py                     4              0             45
 Pruebas/A42Ring_Chart_Matplotlib.py                          3              0             42
 Pruebas/A41Simple_Pie_Chart_Lattice.R                        0              0             40
 Pruebas/A41Simple_Pie_Chart_Seaborn.py                       1              0             13
@@ -11,5 +11,14 @@ Pruebas/A41Simple_Pie_Chart_ggplot2.R                        0              0   
 Pruebas/A42Ring_Chart_ggplot2.R                              0              0              8
 Pruebas/A41Simple_Pie_Chart_Graphics.R                       0              0              6
 --------------------------------------------------------------------------------------------
-SUM:                                                         9              0            172
+SUM:                                                         9              0            174
 --------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Python                           4              9              0            111
+R                                4              0              0             63
+-------------------------------------------------------------------------------
+SUM:                             8              9              0            174
+-------------------------------------------------------------------------------

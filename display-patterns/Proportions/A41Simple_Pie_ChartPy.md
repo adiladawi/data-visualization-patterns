@@ -3,12 +3,27 @@
 
 ## Data Set
 
+For this example it was used Data Set called mtcars (Motor Trend Car Road Tests), which comes by default in R. This data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models). 
+
+To use this data set in Python, was used a Python module called rpy2. First create a file named as datos.py and write the next code.
+
+
+~~~~{.python}
+from rpy2.robjects import r
+from rpy2.robjects import pandas2ri
+
+def data(name):
+    return pandas2ri.ri2py(r[name])
+~~~~~~~~~~~~~
+
+
+
+Then it is necessary import the datos.py file into the proyect, which you are working.
+
 
 ~~~~{.python}
 from datos import data
 d=data('mtcars')
-t1 = d.pivot_table( values = 'carb',index=['cyl'], columns = ['gear'],
-aggfunc =len)
 ~~~~~~~~~~~~~
 
 
@@ -16,10 +31,10 @@ aggfunc =len)
 
 ## Dependences
 
-* Matplotlib
-* Seaborn
-* Pyqtgraph
-* Pandas
+* **rpy2** Python interface to the R language (Gautier, 2016)[^1]. The rpy2 package is used to access all R datasets from Python.
+* **Matplotlib** is a python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms. matplotlib can be used in python scripts, the python and ipython shell, web application servers, and six graphical user interface toolkits (Hunter, 2016)[^2].
+* **Seaborn** is a Python visualization library based on matplotlib. It provides a high-level interface for drawing attractive statistical graphics (Waskom,2013)[^3].
+* **Pyqtgraph**  is a pure-python graphics and GUI library built on PyQt4 / PySide and numpy. It is intended for use in mathematics / scientific / engineering applications (Campagnola, 2014)[^4].
 
 
 ## Code Example
@@ -44,8 +59,10 @@ plt.title('Car Distribution by Cylindres', size=18)
 plt.show()
 ~~~~~~~~~~~~~
 
-![](figures/A41Simple_Pie_ChartPy_figure2_1.png)
+![](figures/A41Simple_Pie_ChartPy_figure3_1.png)
 
+
+The complete online documentation is also available at [matplotlib](http://matplotlib.org/contents.html).
 
 
 ### Seaborn
@@ -69,8 +86,10 @@ plt.title('Car Distribution by Cylindres', size=18)
 plt.show()
 ~~~~~~~~~~~~~
 
-![](figures/A41Simple_Pie_ChartPy_figure3_1.png)
+![](figures/A41Simple_Pie_ChartPy_figure4_1.png)
 
+
+The online documentation is available in [Seaborn](https://stanford.edu/~mwaskom/software/seaborn/api.html).
 
 
 ### Pyqtgraph
@@ -78,10 +97,9 @@ plt.show()
 
 ~~~~{.python}
 import pyqtgraph as pg
-import random
-import numpy
 from  PyQt4  import  QtGui
 from datos import data
+import numpy
 
 win = pg.GraphicsWindow("Car Distribution by Cylindres")
 view = win.addViewBox()
@@ -102,7 +120,7 @@ labels=['','','']
 labels[0]='4 Cyl \n'+str(r[0]*100)+ '%'
 labels[1]='6 Cyl \n'+str(r[1]*100) + '%'
 labels[2]='8 Cyl \n'+str(r[2]*100) +'%'
-position=[ (-1,6), (-5,4), (-5,10)
+position=[ (-1,6), (-5,4), (-5,10)]
 set_angle = 0
 
 for x in r:
@@ -127,12 +145,18 @@ if __name__ == '__main__':
     import sys
     if (sys.flags.interactive != 1) or not hasattr(QtCore,
 'PYQT_VERSION'):
-        QtGui.QApplication.instance().exec
+        QtGui.QApplication.instance().exec_()
 ~~~~~~~~~~~~~
 
-![](figures/A41Simple_Pie_ChartPy_figure4_1.png)
+![](figures/A41Simple_Pie_ChartPy_figure5_1.png)
 
 
+The complete online documentation is also available at [Pyqtrgaph](http://www.pyqtgraph.org/documentation/).
 
 
 ### References
+
+[^1]: Gautier, Laurent (2016). rpy2. Consultado el 01 de Febrero, 2016 en http://rpy2.bitbucket.org/
+[^2]: Hunter, John (2016). matplotlib. Consultado el 03 de Febrero, 2016 en http://matplotlib.org/
+[^3]: Waskom, Michael (2016). Seaborn. Consultado el 08 de Febrero, 2016 en https://stanford.edu/~mwaskom/software/seaborn/index.htmltest/
+[^3]: Campagnola, Luke (2014). Pyqtgraph. Consultado el 10 de Febrero, 2016 http://www.pyqtgraph.org/

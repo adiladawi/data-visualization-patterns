@@ -3,15 +3,29 @@
 
 ## Data Set
 
-For this proyect it will use the dataset mtcars of R.
+For this example it was used Data Set called mtcars (Motor Trend Car Road Tests), which comes by default in R. This data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models). 
 
-The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models)
+To use this data set in Python, was used a Python module called rpy2. First create a file named as datos.py and write the next code.
+
+
+~~~~{.python}
+from rpy2.robjects import r
+from rpy2.robjects import pandas2ri
+
+def data(name):
+        return pandas2ri.ri2py(r[name])
+~~~~~~~~~~~~~
+
+
+
+Then it is necessary import the datos.py file into the proyect, which you are working.
 
 
 ~~~~{.python}
 from datos import data
 d=data('mtcars')
 ~~~~~~~~~~~~~
+
 
 
 
@@ -83,10 +97,11 @@ ax.yaxis.set_visible(False)
 plt.show()
 ~~~~~~~~~~~~~
 
-![](figures/A61Tree_DiagramPy_figure2_1.png)
+![](figures/A61Tree_DiagramPy_figure3_1.png)\
 
 
-The complete online documentation is also available at [matplotlib](http://matplotlib.org/contents.html)
+The complete online documentation is also available at [matplotlib](http://matplotlib.org/contents.html).
+
 
 ### Graphviz
 
@@ -115,7 +130,12 @@ dot.body.append('fontsize=20')
 dot.render('diagram')
 ~~~~~~~~~~~~~
 
-![](figures/A61Tree_DiagramPy_figure3_1.png)
+~~~~{.python}
+<type 'exceptions.SyntaxError'>
+invalid syntax (chunk, line 15)
+~~~~~~~~~~~~~
+
+
 
 The link for Documentation is [Graphviz](http://graphviz.readthedocs.io/en/latest/index.html)
 

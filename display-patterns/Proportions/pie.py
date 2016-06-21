@@ -1,3 +1,4 @@
+
 import pyqtgraph as pg
 from  PyQt4  import  QtGui
 from datos import data

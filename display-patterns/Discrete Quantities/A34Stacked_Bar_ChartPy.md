@@ -18,7 +18,7 @@ def data(name):
 
 
 
-Then you need import the data.py file into a proyect.
+Then it is necessary import the datos.py file into the proyect, which you are working.
 
 
 ~~~~{.python}

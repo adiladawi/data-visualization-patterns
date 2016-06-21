@@ -3,11 +3,21 @@
 
 ## Data Set
 
-For this proyect it will use the dataset mtcars of R.
+For this example it was used Data Set called mtcars (Motor Trend Car Road Tests), which comes by default in R. This data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models). 
 
-The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models)
+To use this data set in Python, was used a Python module called rpy2. First create a file named as datos.py and write the next code.
 
-<<fig = False,  width = '12 cm', echo = True>>=
+<<fig = False, echo = True>>=
+from rpy2.robjects import r
+from rpy2.robjects import pandas2ri
+
+def data(name): 
+	return pandas2ri.ri2py(r[name])
+@
+
+Then it is necessary import the datos.py file into the proyect, which you are working.
+
+<<fig = False, echo = True>>=
 from datos import data
 d=data('mtcars')
 @
@@ -25,7 +35,7 @@ d=data('mtcars')
 
 ### Matplotlib
 
-<<fig = True, width = '12 cm', echo = True>>=
+<<fig = True, echo = True>>=
 import matplotlib.pyplot as plt
 import matplotlib
 import numpy as np
@@ -80,11 +90,12 @@ ax.yaxis.set_visible(False)
 plt.show()
 @
 
-The complete online documentation is also available at [matplotlib](http://matplotlib.org/contents.html)
+The complete online documentation is also available at [matplotlib](http://matplotlib.org/contents.html).
+
 
 ### Graphviz
 
-<<fig = True, width = '12 cm', echo = True>>=
+<<fig = True, echo = True>>=
 from graphviz import Digraph
 from datos import data
 
