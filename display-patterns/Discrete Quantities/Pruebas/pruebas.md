@@ -2,7 +2,7 @@
 | A34Stacked_Bar_Chart_Matplotlib.py       |              4 |             16 | 
 | A32Multiset_Bar_Chart_Matplotlib.py      |              3 |             15 | 
 | A32Multiset_Bar_Chart_Pyqtgraph.py       |              5 |             21 | 
-| A32Multiset_Bar_Chart_Seaborn.py         |              3 |              9 |  
+| A32Multiset_Bar_Chart_Seaborn.py         |              3 |              9 | 
 | A35Isometric_Bar_Chart_Matplotlib.py     |              4 |             21 | 
 | A31Simple_Bar_Chart_Seaborn.py           |              4 |             14 | 
 | A36Span_Chart_Matplotlib.py              |              4 |             17 | 
@@ -10,6 +10,7 @@
 | A35Isometric_Bar_Chart_Lattice.py        |              0 |              8 | 
 | A33Dot_Matrix_Pyqtgraph.py               |              5 |             49 | 
 | A36Span_Chart_Pyqtgraph.py               |              5 |             23 | 
+| A35Isometric_Bar_Chart_Pyqtgraph.py      |              6 |             36 | 
 | A33Dot_Matrix_Seaborn.py                 |              5 |             39 | 
 | A34Stacked_Bar_Chart_Seaborn.py          |              4 |             16 | 
 | A36Span_Chart_Seaborn.py                 |              4 |             17 | 

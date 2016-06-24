@@ -2,11 +2,9 @@ import pylab
 import random
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
-from datos import data
-
 
 class Treemap:
-    def __init__(self, tree, iter_method, size_method, color_method, t1):
+    def __init__(self, tree, iter_method, size_method, color_method):
         self.ax = pylab.subplot(111,aspect='equal')        
         pylab.subplots_adjust(left=0, right=1, top=1, bottom=0)
         self.ax.set_xticks([])
@@ -18,9 +16,7 @@ class Treemap:
 
     def addnode(self, node, lower=[0,0], upper=[1,1], axis=0):
         axis = axis % 2
-        self.draw_rectangle(lower, upper, node)
-        self.ax.annotate("Rectangle", upper,lower, color='w', weight='bold', 
-                fontsize=13, ha='left', va='bottom')
+        self.draw_rectangle(lower, upper, node)      
         width = upper[axis] - lower[axis]
         try:
             for child in self.iter_method(node):
@@ -34,8 +30,7 @@ class Treemap:
     def draw_rectangle(self, lower, upper, node):
         r = Rectangle( lower, upper[0]-lower[0], upper[1] - lower[1],
                    edgecolor='k',
-                   facecolor= self.color_method(node))
-        #self.ax.text(upper[1]-0.15,lower[1]+.1,"6 Cylindres", fontsize='12', va='center')
+                   facecolor= self.color_method(node))        
         self.ax.add_patch(r)       
 
 
@@ -53,8 +48,6 @@ if __name__ == '__main__':
     def random_color(thing):
         return (random.random(),random.random(),random.random())
 
-    d=data('mtcars')
-    t1 = d.pivot_table( values = 'carb',index=['cyl'], columns = ['gear'], aggfunc = len)    
     tree=((2,12),((4,(1,2)),(8,(1,2))))    
-    Treemap(tree, iter, size,   random_color, t1)
+    Treemap(tree, iter, size,   random_color)
     plt.show()

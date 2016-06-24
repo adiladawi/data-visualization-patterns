@@ -10,8 +10,7 @@ dot.node('A', 'Car Distribution by Cylindres')
 dot.node('B', '6 cylindres')
 j=67;
 for i in subset1.index:
-    dot.node(unichr(j), str(i))
-    print i+"\n"
+    dot.node(unichr(j), str(i))   
     j=j+1
 
 dot.edge('A', 'B')

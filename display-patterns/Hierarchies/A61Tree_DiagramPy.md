@@ -97,7 +97,7 @@ ax.yaxis.set_visible(False)
 plt.show()
 ~~~~~~~~~~~~~
 
-![](figures/A61Tree_DiagramPy_figure3_1.png)\
+![](figures/A61Tree_DiagramPy_figure3_1.png)
 
 
 The complete online documentation is also available at [matplotlib](http://matplotlib.org/contents.html).
@@ -119,9 +119,8 @@ dot.node('A', 'Car Distribution by Cylindres')
 dot.node('B', '6 cylindres')
 j=67;
 for i in subset1.index:
-        dot.node(unichr(j), str(i))
-        print i+"\n"
-        j=j+1
+    dot.node(unichr(j), str(i))
+    j=j+1
 
 dot.edge('A', 'B')
 dot.edges(['BC','BD','BE','BF','BG','BH','BI'])
@@ -130,11 +129,7 @@ dot.body.append('fontsize=20')
 dot.render('diagram')
 ~~~~~~~~~~~~~
 
-~~~~{.python}
-<type 'exceptions.SyntaxError'>
-invalid syntax (chunk, line 15)
-~~~~~~~~~~~~~
-
+![](figures/A61Tree_DiagramPy_figure4_1.png)
 
 
 The link for Documentation is [Graphviz](http://graphviz.readthedocs.io/en/latest/index.html)

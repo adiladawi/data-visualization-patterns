@@ -21,7 +21,7 @@ head(mtcars)
 
 ## Dependences
 
-* treemap
+* **Treemap**
 
 
 ## Code Example
@@ -34,12 +34,13 @@ head(mtcars)
 library(treemap)
 treemap(mtcars,
 index=c("cyl", "gear"),
-vSize="cyl", title="Tree Map by Cylindres and Gear")
+vSize="cyl", title="Tree Map by Cylindres and Gears")
 
 ```
 The complete online documentation is also available in the form of a single [PDF](https://cran.r-project.org/web/packages/treemap/treemap.pdf) file at CRAN.
 
 From within R, type:
+
 > help(treemap)
 
 

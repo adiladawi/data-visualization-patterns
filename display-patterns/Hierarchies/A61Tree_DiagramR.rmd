@@ -19,7 +19,7 @@ head(mtcars)
 
 ## Dependences
 
-* diagram
+* **Diagram:** 
 
 
 ## Code Example
@@ -46,9 +46,11 @@ for ( i in 1:length(labs)) textrect(elpos[i,],radx=0.06,rady=0.05,lab=labs[i] ,c
 The complete online documentation is also available in the form of a single [PDF](https://cran.r-project.org/web/packages/diagram/diagram.pdf) file at CRAN.
 
 From within R, type:
+
 > help(diagram)
 
 
 ## References
 
-[^1]: Soetaert, Karline (2014). CRAN. Consultado el 12 de Mayo, 2016 en https://cran.r-project.org/web/packages/diagram/index.html
+[^1]: Soetaert, Karline (2014). CRAN. Consultado el 12 de Mayo, 2016 en https://cran.r-project.org/web/packages/diagram/index.html.
+

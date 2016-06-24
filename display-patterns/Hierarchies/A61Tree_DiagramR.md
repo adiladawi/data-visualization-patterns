@@ -5,16 +5,15 @@ For implementation of pattern Tree Diagram in R, it use the package
 "diagram". This package include functions for visualises simple graphs
 (networks) based on a transition matrix, utilities to plot flow
 diagrams, visualising webs, electrical networks, ... (Soetaert,
-2014)[1].
+2014)[^1].
 
 Data Set
 --------
 
-For this proyect it will use the dataset mtcars.
-
-The data was extracted from the 1974 Motor Trend US magazine, and
-comprises fuel consumption and 10 aspects of automobile design and
-performance for 32 automobiles (1973–74 models).
+For this proyect it was use the dataset mtcars. This data was extracted
+from the 1974 Motor Trend US magazine, and comprises fuel consumption
+and 10 aspects of automobile design and performance for 32 automobiles
+(1973–74 models).
 
     head(mtcars)
 
@@ -29,7 +28,7 @@ performance for 32 automobiles (1973–74 models).
 Dependences
 -----------
 
--   diagram
+-   **Diagram:**
 
 Code Example
 ------------
@@ -58,10 +57,12 @@ single
 [PDF](https://cran.r-project.org/web/packages/diagram/diagram.pdf) file
 at CRAN.
 
-From within R, type: &gt; help(diagram)
+From within R, type:
+
+> help(diagram)
 
 References
 ----------
 
-[1] Soetaert, Karline (2014). CRAN. Consultado el 12 de Mayo, 2016 en
-<https://cran.r-project.org/web/packages/diagram/index.html>
+[^1] Soetaert, Karline (2014). CRAN. Consultado el 12 de Mayo, 2016 en
+<https://cran.r-project.org/web/packages/diagram/index.html>.

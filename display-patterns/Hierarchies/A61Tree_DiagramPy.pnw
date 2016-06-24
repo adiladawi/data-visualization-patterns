@@ -108,9 +108,8 @@ dot.node('A', 'Car Distribution by Cylindres')
 dot.node('B', '6 cylindres')
 j=67;
 for i in subset1.index:
-	dot.node(unichr(j), str(i))
-	print i+"\n"
-	j=j+1
+    dot.node(unichr(j), str(i))   
+    j=j+1
 
 dot.edge('A', 'B')
 dot.edges(['BC','BD','BE','BF','BG','BH','BI'])
